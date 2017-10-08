@@ -17,21 +17,22 @@ Terminates inclusion
 All collments starts with character '
 
 Example:
------------------------------------------------------------
-<file bank.txt>
 
+<file bank.txt>
+[CODE]
 'The first file
 #include bank2.txt	
 end	
+[/CODE]
 
 <file bank2.txt>
 
 'The second file
 myvariable foo	'myvariable equals foo
 end	
------------------------------------------------------------
 
-4)New objects creation starts with object type followed by objects name. The objects declaration is required before using
+
+4) New objects creation starts with object type followed by objects name. The objects declaration is required before using
 
 5) Types
 
