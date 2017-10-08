@@ -7,7 +7,7 @@ Usage:
 msbank my_sound_bank_description_file.txt
 ```
 
-The example of sound bank given in the 'sbk' folder.
+The example of sound bank given in the 'sb-example' folder.
 
 ## Source files for sound back compiler
 
@@ -161,8 +161,8 @@ end
 
 Default variables:
 ```
-volume		=UC(AL_VOL_FULL);	/* overall volume for this instrument */
-pan			=SC(AL_PAN_CENTER); /* 0 = hard left, 127 = hard right */
+volume		=UC(AL_VOL_FULL);   /* overall volume for this instrument */
+pan		=SC(AL_PAN_CENTER); /* 0 = hard left, 127 = hard right */
 priority	=SC(5);	/* voice priority for this instrument */
 flags		=0;
 tremType	=0;	/* the type of tremelo osc. to use */
