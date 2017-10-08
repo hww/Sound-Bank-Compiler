@@ -7,6 +7,8 @@ Usage:
 msbank my_sound_bank_description_file.txt
 ```
 
+The example of sound bank given in the 'sbk' folder.
+
 ## Source files for sound back compiler
 
 SBC gets on input a text file. Each line of the text could have 2 parameters when the the line is not empty or commented out. First word is a parameter name the second is value.
