@@ -51,7 +51,7 @@ loop:
 			if(parnum==1) 
 			{
 				if( strcmp( par1, "end")==0) return 1;
-				if( strcmp( par1, "wave")==0) return 1;
+				if( strcmp( par1, "waves")==0) return 1;
 				print_e( par1,"Only one parameter found" );
 			}
 			
@@ -60,6 +60,10 @@ loop:
 				if( strcmp( par1, "p")==0) return 1;
 				if( strcmp( par1, "sustain")==0) return 1;
 				if( strcmp( par1, "loop")==0) return 1;
+				if( strcmp( par1, "velminmax")==0) return 1;
+				if( strcmp( par1, "region")==0) return 1;
+				if( strcmp( par1, "wave")==0) return 1;
+				if( strcmp( par1, "instrument")==0) return 1;
 				print_e( par1,"Too more parameter found" );
 			}
 			

@@ -1,18 +1,18 @@
 /**********************************************************
 
-	Sound Bank Compiler
+	Sound Bank Compiller
 
  **********************************************************/
 
 
 
-#define MAX_FILES 50
+#define MAX_FILES 150
 #define FILE_NAME_SIZE 50
 #define MAX_LINE_LENGH 255
 #define MAX_NUM_OF_ERRORS 20
 #define VAR_NAME_SIZE 50
 #define MAX_CTL_SIZE 65536
-#define MAX_LIST_SIZE 10000
+#define MAX_LIST_SIZE 20000
 
 /**********************************************************
 	Работа со стеком файлов
@@ -105,6 +105,8 @@ unsigned short  u16val( char *v);
 unsigned  long  u32val( char *v);
 unsigned  long  pctlval( char objtype, char *name );
 u16			noteval( char *v );
+s16 panval( char *v);
+
 /**********************************************************
 	Работа с tbl файлом
  **********************************************************/

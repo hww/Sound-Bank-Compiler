@@ -70,40 +70,12 @@ typedef u8      ALPan;
  ***********************************************************************/
 
 
-#define AL_BANK_VERSION    'B1'
+#define AL_BANK_VERSION    'B2'
 
 /* Possible wavetable types */
-enum    {AL_ADPCM_WAVE = 0,
+enum    {AL_BRR_WAVE = 0,
          AL_RAW_WAVE,
 };
-
-typedef struct {
-    s32 order;
-    s32 npredictors;
-    s16 book[1];        /* Actually variable size. Must be 8-byte aligned */
-} ALADPCMBook;
-
-typedef struct {
-    u32         start;
-    u32         end;
-    u32         count;
-    ADPCM_STATE state;
-} ALADPCMloop;
-
-typedef struct {
-    u32         start;
-    u32         end;
-    u32         count;
-} ALRawLoop;
-
-typedef struct {
-    ALMicroTime attackTime;
-    ALMicroTime decayTime;
-    ALMicroTime releaseTime;
-    u8          attackVolume;
-    u8          decayVolume;
-} ALEnvelope;
-
 
 typedef struct {
 	s16			type;
@@ -113,8 +85,7 @@ typedef struct {
 	s16			loopEnd;
 	s16			pointCount;
 	struct 
-	{
-		s16		val;
+	{	s16		val;
 		s16		time;
 	}			pointArray[1];
 } ALEnvelopeTable;
@@ -128,118 +99,60 @@ typedef struct {
     s8          detune;
 } ALKeyMap;
 
-typedef struct {
-#ifdef CTL_PTR_16_BIT
-    u16			loop;
-    u16			book;
-#else
-    ALADPCMloop *loop;
-    ALADPCMBook *book;
-#endif
-} ALADPCMWaveInfo;
-
-typedef struct {
-#ifdef CTL_PTR_16_BIT
-    u16		   loop;
-#else
-    ALRawLoop *loop;
-#endif
-} ALRAWWaveInfo;
-
 typedef struct ALWaveTable_s {
     u32         base;           /* ptr to start of wave data    */
-    s32         len;            /* length of data in bytes      */
-    u8          type;           /* compression type             */
-    u8          flags;          /* offset/address flags         */
-    s16			pad;
-	union {
-        ALADPCMWaveInfo adpcmWave;
-        ALRAWWaveInfo   rawWave;
-    } waveInfo;
+    u32         len;            /* length of data in bytes      */
+    u16         type;           /* compression type             */
+    u16         flags;          /* offset/address flags         */
+    u16			rate;
+	u16			ltype;
+	u32			start;
+	u32			end;
+	u32			count;
 } ALWaveTable;
 
 typedef struct ALSound_s {
-#ifdef CTL_PTR_16_BIT
     u16			venvelope;
     u16			penvelope;
     u16			keyMap;
     u16			wavetable;     /* offset to wavetable struct           */
-#else
-    ALEnvelope  *envelope;
-    ALKeyMap    *keyMap;
-    ALWaveTable *wavetable;     /* offset to wavetable struct           */
-#endif
     ALPan       samplePan;
     u8          sampleVolume;
 	s16			sampleFadeout;
     u8          flags;
 } ALSound;
 
-typedef struct ALSound_s_ {
-#ifdef CTL_PTR_16_BIT
-    u16			envelope;
-    u16			keyMap;
-    u16			wavetable;     /* offset to wavetable struct           */
-#else
-    ALEnvelope  *envelope;
-    ALKeyMap    *keyMap;
-    ALWaveTable *wavetable;     /* offset to wavetable struct           */
-#endif
-    ALPan       samplePan;
-    u8          sampleVolume;
-    u8          flags;
-} ALSound_;
-
 typedef struct {
     u8          volume;         /* overall volume for this instrument   */
     ALPan       pan;            /* 0 = hard left, 127 = hard right      */
     u8          priority;       /* voice priority for this instrument   */
     u8          flags;
-    u8          tremType;       /* the type of tremelo osc. to use      */
-    u8          tremRate;       /* the rate of the tremelo osc.         */
-    u8          tremDepth;      /* the depth of the tremelo osc         */
-    u8          tremDelay;      /* the delay for the tremelo osc        */
+//    u8          tremType;       /* the type of tremelo osc. to use      */
+//    u8          tremRate;       /* the rate of the tremelo osc.         */
+//    u8          tremDepth;      /* the depth of the tremelo osc         */
+//    u8          tremDelay;      /* the delay for the tremelo osc        */
     u8          vibType;        /* the type of tremelo osc. to use      */
     u8          vibRate;        /* the rate of the tremelo osc.         */
     u8          vibDepth;       /* the depth of the tremelo osc         */
     u8          vibDelay;       /* the delay for the tremelo osc        */
     s16         bendRange;      /* pitch bend range in cents            */
     s16         soundCount;     /* number of sounds in this array       */
-#ifdef CTL_PTR_16_BIT
     u16			soundArray[1];
-#else
-    ALSound     *soundArray[1];
-#endif
 } ALInstrument;
 
 typedef struct ALBank_s {
-    s16                 instCount;      /* number of programs in this bank */
-    u8                  flags;
-#ifndef DSP56
-    u8                  pad;
-#endif
-    s32                 sampleRate;     /* e.g. 44100, 22050, etc...       */
-#ifdef CTL_PTR_16_BIT
-    u16					percussion;    /* default percussion for GM       */
-    u16					instArray[1];  /* ARRAY of instruments            */
-#else
-    ALInstrument        *percussion;    /* default percussion for GM       */
-    ALInstrument        *instArray[1];  /* ARRAY of instruments            */
-#endif
+    s16         instCount;      /* number of programs in this bank */
+    u16         flags;
+    u16			percussion;     /* default percussion for GM       */
+    u16			instArray[1];   /* ARRAY of instruments            */
 } ALBank;
 
 typedef struct {                /* Note: sizeof won't be correct */
-#ifdef DSP56
 	u32			ctl_size;
 	u32			tbl_size;
-#endif
     s16         revision;       /* format revision of this file         */
     s16         bankCount;      /* number of banks                      */
-#ifdef CTL_PTR_16_BIT
-    u16			 bankArray[1];  /* ARRAY of bank offsets                */
-#else
-    ALBank      *bankArray[1];  /* ARRAY of bank offsets                */
-#endif
+    u16			bankArray[1];   /* ARRAY of bank offsets                */
 } ALBankFile;
 
 

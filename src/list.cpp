@@ -47,7 +47,7 @@ unsigned long idx=0;
 		if((objtype==list[idx].obj) && ( strcmp( name, list[idx].name)==0)) return &list[idx];
 		idx++;
 	}
-
+	print_e( name, "Object Not Defined");
 	return 0;
 }
 

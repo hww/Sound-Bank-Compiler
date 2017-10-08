@@ -95,6 +95,7 @@ typedef unsigned long  ptbl;		/* pointer to tbl */
 #define U16(x)		_U16(x)
 #define U32(x)		_U32(x)
 
+#define VPAN		S16(panval(val))
 #define VN			_VN(val)
 #define VSC			_VSC(val) 
 #define VUC			_VUC(val) 
@@ -102,7 +103,15 @@ typedef unsigned long  ptbl;		/* pointer to tbl */
 #define VS32		S32(s32val(val))
 #define VU16		U16(u16val(val))
 #define VU32		U32(u32val(val))
+#define VN1			_VN(val1)
+#define VSC1		_VSC(val1) 
+#define VUC1		_VUC(val1) 
+#define VS161		S16(s16val(val1))
+#define VS321		S32(s32val(val1))
+#define VU161		U16(u16val(val1))
+#define VU321		U32(u32val(val1))
 #define VPTCTL(x)   PTCTL(pctlval(x,val))
+#define VPTCTL1(x)   PTCTL(pctlval(x,val1))
 
 
 

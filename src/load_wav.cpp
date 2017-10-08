@@ -160,7 +160,7 @@ int LoadWav(char *filename)
 	FILE *fp;
 
 	if((fp=fopen(filename,"rb"))==NULL){
-		printf("Couldn't open wav file\n");
+		print_e(filename,"Couldn't open wav file\n");
 		return NULL;
 	}
 

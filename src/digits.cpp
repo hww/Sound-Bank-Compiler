@@ -11,7 +11,29 @@
 
 #include "ultratypes.h"
 #include "main.h"
+#include  "libaudio.h"
 
+ /**********************************************************
+	Преобразование велечин Панорам
+ **********************************************************/
+
+s16 panval( char *v)
+{
+s16 b;
+		b = s8val(v);
+		b+=AL_PAN_CENTER;
+		if(b>AL_PAN_RIGHT)
+		{
+			b = AL_PAN_CENTER;
+			print_e( val,"Too big PAN");
+		}
+		if(b<AL_PAN_LEFT)
+		{
+			b = AL_PAN_LEFT;
+			print_e( val,"Too Low PAN");
+		}
+		return b;
+}
 
  /**********************************************************
 	Преобразование велечин НОТ
