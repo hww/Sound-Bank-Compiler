@@ -40,14 +40,14 @@ end
 New objects creation starts with object type followed by objects name. The objects declaration is required before using
 
 ## Types
-
+```
 wave		the waveform
 keymap		keyboard map
 envelope	envelope form
 sound		the sound 
 instrument	the instrument
 bank		the sound bank
-
+```
 ## WAVE Object
 
 Has only one variable 'use' and the sample's file name as value.
@@ -62,23 +62,23 @@ end
 ## KEYMAP Object
 
 Defaults:
-
+```
 velocityMin	=	UC(1);
 velocityMax	=	UC(127);
 keyMin		=	UC(1);
 keyMax		=	UC(127);
 keyBase		=	UC(60);
 detune		=	SC(0);
-
+```
 User defined values:
-
+```
 velocityMin	Minimum press force
 velocityMax	Maximum press force
 keyMin		Lover key number
 keyMax		Higher key number
 keyBase		Base tone frequency
 detune		Tunning
-
+```
 Example
 ```
 keymap 	key1
@@ -94,21 +94,21 @@ end
 ## ENVELOPE Object
 
 Default variables:
-
+```
 attackTime		=	S32(0);	
 attackVolume		=	UC(AL_VOL_FULL);
 decayTime		=	S32(0);
 decayVolume		=	UC(AL_VOL_FULL); 
 releaseTime		=	S32(0);
-
+```
 User defined variables:
-
+```
 attacktime
 attackvolume
 decaytime
 decayvolume
 releasetime
-
+```
 Example
 ```
 envelope env1
@@ -123,20 +123,20 @@ end
 ## SOUND Object
 
 Default variables:
-
+```
 samplePan		= SC(AL_PAN_CENTER);
-sampleVolume	= UC(AL_VOL_FULL);
-flags				= UC(0);
-
+sampleVolume		= UC(AL_VOL_FULL);
+flags			= UC(0);
+```
 User defined variables:
-
+```
 envelope		Name of envelope
 keymap			Name of keyboard's map
 use			The waveform
 samplePan		Sample's panorama
 sampleVolume		Sample's volume
 flags			Flags
-
+```
 Example
 ```
 sound 		hi
@@ -152,7 +152,7 @@ end
 ## INSTRUMRNT Object
 
 Default variables:
-
+```
 volume		=UC(AL_VOL_FULL);	/* overall volume for this instrument */
 pan			=SC(AL_PAN_CENTER); /* 0 = hard left, 127 = hard right */
 priority	=SC(5);	/* voice priority for this instrument */
@@ -167,9 +167,9 @@ vibDepth	=0;	/* the depth of the tremelo osc */
 vibDelay	=0;	/* the delay for the tremelo osc */
 bendRange	=S16(200);	/* pitch bend range in cents */
 soundCount	=0;	/* number of sounds in this array */
-
+```
 User defined values
-
+```
 volume		The volume
 pan			The panorama
 priority	The priority value
@@ -184,7 +184,7 @@ vibDepth	Vibrato depth
 vibDelay	Vibrato duration
 bendRange	Pitch percents
 sound		Sound of this instrument
-
+```
 Example
 ```
 instrument flute
@@ -209,19 +209,19 @@ end
 ## BANK Object
 
 Default variables:
-
+```
 instCount = 0;	/* number of programs in this bank */
 flags = 0;
 pad = 0;
 sampleRate = S32(44100);	/* e.g. 44100, 22050, etc... */
-
+```
 user defined variables:
-
+```
 flags		Flags word
 samplerate	Infrequence of discretization
 percussion	Percussion instrument
 instrument	Instrument
-
+```
 Example
 ```
 bank stings2
