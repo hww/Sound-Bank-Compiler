@@ -1,81 +1,95 @@
-# Sound-Bank-Compiler
-Sound Bank Compiler
+# Sound Bank Compiler
+
+Sound Bank Compiler (alo known as msbank) is a command line tool which build sound bank for sound synteziter. It uses on input a bank description file and the collection of .wav files. This compiller was used by me for different projects include the game for N64.
+
+Usage:
+```
+msbank my_sound_bank_description_file.txt
+```
+
+The example of sound bank given in the 'sb-example' folder.
+
+## Source files for sound back compiler
 
 SBC gets on input a text file. Each line of the text could have 2 parameters when the the line is not empty or commented out. First word is a parameter name the second is value.
 One file could include others.
+```
+#include C:\DIR\name.txt
+```
+Includes file name.txt inside this file. To terminates any object use 'end'
 
-1)	#include C:\DIR\name.txt
-
-Includes file name.txt inside this file
-
-2)	end
-
-Terminates inclusion
-
-3)	'My Comment
+```
+end
+```
 
 All collments starts with character '
+```
+'My Comment
+```
 
 Example:
------------------------------------------------------------
-<file bank.txt>
 
+<file bank.txt>
+```
 'The first file
 #include bank2.txt	
 end	
-
+```
+	
 <file bank2.txt>
-
+```
 'The second file
 myvariable foo	'myvariable equals foo
 end	
------------------------------------------------------------
+```
 
-4)New objects creation starts with object type followed by objects name. The objects declaration is required before using
+## Objects creation
 
-5) Types
+New objects creation starts with object type followed by objects name. The objects declaration is required before using
 
+## Types
+```
 wave		the waveform
 keymap		keyboard map
 envelope	envelope form
 sound		the sound 
 instrument	the instrument
 bank		the sound bank
-
-5.1 WAVE Object
+```
+## WAVE Object
 
 Has only one variable 'use' and the sample's file name as value.
 
 Example:
------------------------------------------------------------
+```
 wave yahhoo
 use	"c:\smpls\yaho.wav"
 end
------------------------------------------------------------
+```
 
-5.2	KEYMAP Object
+## KEYMAP Object
 
 Defaults:
-
+```
 velocityMin	=	UC(1);
 velocityMax	=	UC(127);
 keyMin		=	UC(1);
 keyMax		=	UC(127);
 keyBase		=	UC(60);
 detune		=	SC(0);
-
+```
 User defined values:
-
+```
 velocityMin	Minimum press force
 velocityMax	Maximum press force
 keyMin		Lover key number
 keyMax		Higher key number
 keyBase		Base tone frequency
 detune		Tunning
-
+```
 Example
------------------------------------------------------------
-keymap 		key1
+```
+keymap 	key1
 	velocityMin	10
 	velocityMax	100
 	keyMin		0
@@ -83,56 +97,56 @@ keymap 		key1
 	keyBase		12
 	detune		0
 end
------------------------------------------------------------
+```
 
-5.3	ENVELOPE Object
+## ENVELOPE Object
 
 Default variables:
-
+```
 attackTime		=	S32(0);	
-attackVolume	=	UC(AL_VOL_FULL);
+attackVolume		=	UC(AL_VOL_FULL);
 decayTime		=	S32(0);
 decayVolume		=	UC(AL_VOL_FULL); 
 releaseTime		=	S32(0);
-
+```
 User defined variables:
-
+```
 attacktime
 attackvolume
 decaytime
 decayvolume
 releasetime
-
+```
 Example
------------------------------------------------------------
-envelope 		env1
+```
+envelope env1
 	attacktime		1000
-	attackvolume	100
+	attackvolume		100
 	decaytime		1000
 	decayvolume		50
 	releasetime		2000
 end
------------------------------------------------------------
+```
 
-5.4 SOUND Object
+## SOUND Object
 
 Default variables:
-
+```
 samplePan		= SC(AL_PAN_CENTER);
-sampleVolume	= UC(AL_VOL_FULL);
+sampleVolume		= UC(AL_VOL_FULL);
 flags			= UC(0);
-
+```
 User defined variables:
-
+```
 envelope		Name of envelope
 keymap			Name of keyboard's map
-use				The waveform
+use			The waveform
 samplePan		Sample's panorama
-sampleVolume	Sample's volume
+sampleVolume		Sample's volume
 flags			Flags
-
-ПРИМЕР
------------------------------------------------------------
+```
+Example
+```
 sound 		hi
 	envelope	env1
 	keymap 		kbd1
@@ -141,14 +155,14 @@ sound 		hi
 	sampleVolume	100
 	flags		0
 end
------------------------------------------------------------
+```
 
-5.5 INSTRUMRNT Object
+## INSTRUMRNT Object
 
 Default variables:
-
-volume		=UC(AL_VOL_FULL);	/* overall volume for this instrument */
-pan			=SC(AL_PAN_CENTER); /* 0 = hard left, 127 = hard right */
+```
+volume		=UC(AL_VOL_FULL);   /* overall volume for this instrument */
+pan		=SC(AL_PAN_CENTER); /* 0 = hard left, 127 = hard right */
 priority	=SC(5);	/* voice priority for this instrument */
 flags		=0;
 tremType	=0;	/* the type of tremelo osc. to use */
@@ -161,9 +175,9 @@ vibDepth	=0;	/* the depth of the tremelo osc */
 vibDelay	=0;	/* the delay for the tremelo osc */
 bendRange	=S16(200);	/* pitch bend range in cents */
 soundCount	=0;	/* number of sounds in this array */
-
+```
 User defined values
-
+```
 volume		The volume
 pan			The panorama
 priority	The priority value
@@ -178,9 +192,9 @@ vibDepth	Vibrato depth
 vibDelay	Vibrato duration
 bendRange	Pitch percents
 sound		Sound of this instrument
-
+```
 Example
------------------------------------------------------------
+```
 instrument flute
 	volume		100
 	pan	120
@@ -198,26 +212,26 @@ instrument flute
 	sound		lo
 	sound		hi
 end
------------------------------------------------------------
+```
 
-5.6	BANK Object
+## BANK Object
 
 Default variables:
-
+```
 instCount = 0;	/* number of programs in this bank */
 flags = 0;
 pad = 0;
 sampleRate = S32(44100);	/* e.g. 44100, 22050, etc... */
-
+```
 user defined variables:
-
+```
 flags		Flags word
 samplerate	Infrequence of discretization
 percussion	Percussion instrument
 instrument	Instrument
-
-ПРИМЕР
------------------------------------------------------------
+```
+Example
+```
 bank stings2
 	flags	5
 	samplerate	32000
@@ -226,4 +240,4 @@ bank stings2
 	instrument	string2
 	instrument	horus
 end
------------------------------------------------------------
+```
