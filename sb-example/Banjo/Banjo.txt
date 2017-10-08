@@ -1,0 +1,31 @@
+waves
+	wave	Banjo	D:\sbk\Banjo\BanjoB2.wav
+	end
+
+envelope Banjo
+	sustain	2	2
+	p	127	690	' attack value / hold time	
+	p	50	500	' hold value / decay time
+	p	5	100	' sustain val / release time
+	end
+
+
+' 1 ************************************	
+keymap	Banjok
+	region	C-3	C-8
+	keybase	A-7
+	detune	0
+	end
+
+sound	Banjos
+	volume		115
+	pan		0
+	use		Banjo
+	venvelope	Banjo
+	keymap		Banjok
+	end
+
+
+instrument	Banjo
+	sound	Banjos
+	end

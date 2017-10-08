@@ -1,0 +1,29 @@
+waves
+	wave	36attackbs		D:\sbk\SyntBass\36attackbs.wav
+
+	end
+
+envelope SyntBass
+	sustain		1	1
+	p		0	0
+	p		127	100
+	end
+
+' 1 ************************************	
+keymap	36attackbsk
+	region	C-2	F-7
+	keybase	C-6
+	detune 	0
+	end
+	
+sound	36attackbss
+	volume		115
+	pan		0
+	use		36attackbs
+	venvelope	SyntBass
+	keymap		36attackbsk
+	end
+
+instrument	SyntBass
+	sound	36attackbss
+	end

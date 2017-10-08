@@ -1,0 +1,34 @@
+waves
+	wave	FHORN_SUSF581 	d:/sbk/FHorn/FHORN_SUSF581.wav
+
+	end
+
+envelope fhorne
+	sustain		1	1
+	p		127	2200 
+	p		90	100
+	end
+	
+' 1 ***************************************************
+	
+keymap	fhorn_F#4D#5k
+	region	C-3	E-7
+	keybase	A#5
+	end
+
+sound	fhorn_F#4D$5s
+	pan		0
+	use		FHORN_SUSF581
+	venvelope	fhorne
+	keymap		fhorn_F#4D#5k
+	end
+	
+instrument	FrenchHorn
+	vibtype		1
+	vibdelay	500
+	vibdepth	10
+	vibrate		400	'4hz	
+
+	sound		fhorn_F#4D$5s
+
+	end

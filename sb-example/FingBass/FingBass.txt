@@ -1,0 +1,29 @@
+waves
+	wave	pick_a#1		D:\sbk\FingBass\pick_a#1.wav
+
+	end
+
+envelope FingBass
+	sustain		1	1
+	p		0	0
+	p		127	100
+	end
+
+' 1 ************************************	
+keymap	pick_a#1k
+	region	C-3	A#5
+	keybase	B4
+	detune 	91
+	end
+	
+sound	pick_a#1s
+	volume		115
+	pan		0
+	use		pick_a#1
+	venvelope	Brass
+	keymap		pick_a#1k
+	end
+
+instrument	FingBass
+	sound	pick_a#1s
+	end

@@ -1,0 +1,31 @@
+waves
+	wave	Guitar	D:\sbk\Guitar\STEEL_F_A#3.wav
+	end
+
+envelope Guitar
+	sustain	2	2
+	p	127	50	' attack value / hold time	
+	p	100	2000	' hold value / decay time
+	p	0	100	' sustain val / release time
+	end
+
+
+' 1 ************************************	
+keymap	Guitark
+	region	C-3	D-7
+	keybase	D#6
+	detune	0
+	end
+
+sound	Guitars
+	volume		115
+	pan		0
+	use		Guitar
+	venvelope	Guitar
+	keymap		Guitark
+	end
+
+
+instrument	Guitar
+	sound	Guitars
+	end

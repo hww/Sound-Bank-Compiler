@@ -1,0 +1,94 @@
+waves
+	wave	STORSUSF61	d:/sbk/SlowString/STORSUSF61-R(L).wav
+	wave	STORSUSF81 	d:/sbk/SlowString/STORSUSF81-R(L).wav
+	wave 	StringsTrem	d:/sbk/SlowString/StringsTremC2.wav
+	wave 	PizzViolin		d:/sbk/SlowString/PizzViolinE3.wav
+	end
+
+envelope slowstringe
+	sustain		1	1
+	p		0	1000
+	p		127	300
+	end
+	
+envelope stringe
+	sustain		1	1
+	p		0	100
+	p		127	300
+	end
+
+' 1 ************************************	
+keymap	STORSUSF61k
+	region	C-3	G-7
+	keybase	C#6
+	detune	30
+	end
+
+sound	STORSUSF61s
+	volume		115
+	pan		5
+	use		STORSUSF61
+	venvelope	stringe
+	keymap		STORSUSF61k
+	end
+
+' 2 ************************************	
+keymap	STORSUSF81k
+	region	C-3	C-8
+	keybase	A-6
+	detune	0
+	end
+	
+sound	STORSUSF81s
+	volume		115
+	pan		-20
+	use		STORSUSF81
+	venvelope	slowstringe
+	keymap		STORSUSF81k
+	end
+
+' 3 ************************************	
+keymap	StringsTremk
+	region	C-3	C-8
+	keybase	B-6
+	detune	-17
+	end
+	
+sound	StringsTrems
+	volume		115
+	pan		0
+	use		StringsTrem
+	venvelope	stringe
+	keymap		StringsTremk
+	end
+	
+' 4 ************************************	
+keymap	PizzViolink
+	region	C-3	A-7
+	keybase	D#6
+	detune	0
+	end
+	
+sound	PizzViolins
+	volume		115
+	pan		0
+	use		PizzViolin
+	venvelope	stringe
+	keymap		PizzViolink
+	end
+	
+instrument	PizzViolin
+	sound	PizzViolins
+	end
+	
+instrument	StringsTrem
+	sound	StringsTrems
+	end
+	
+instrument	SlowStrings
+	sound	STORSUSF81s
+	end
+
+instrument	Strings
+	sound	STORSUSF61s
+	end

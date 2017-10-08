@@ -1,0 +1,34 @@
+waves
+	wave	C4Oboe 	d:/sbk/Oboe/C4_Oboe_Sft_1.wav
+	end
+	
+envelope oboee
+	sustain	2	2
+	p	127	1000	' hold
+	p	127	990	' decay
+	p	90	289	' sus - release
+	end
+	
+' 1 ************************************	
+keymap	OboeB5D6k
+	region	C-3	C-8
+	keybase	C-7
+	end
+
+sound	OboeB5D6s
+	volume		120
+	pan		5
+	use		C4Oboe
+	venvelope	oboee
+	keymap		OboeB5D6k
+	end
+
+instrument	Oboe
+	vibtype		1
+	vibdelay	801
+	vibdepth	10
+	vibrate		400	
+
+	sound	OboeB5D6s
+	end
+

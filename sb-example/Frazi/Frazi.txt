@@ -1,0 +1,544 @@
+waves
+	wave	Pomosh		D:/sbk/Frazi/Pomosh.wav
+	wave	Gromkost	D:/sbk/Frazi/Gromkost.wav
+	wave	Temp		D:/sbk/Frazi/Temp.wav
+	wave	Tonalnos	D:/sbk/Frazi/Tonalnos.wav
+	wave	Start		D:/sbk/Frazi/Start.wav
+	wave	Stop		D:/sbk/Frazi/Stop.wav
+	wave	Pauza		D:/sbk/Frazi/Pauza.wav
+	wave	Zapis		D:/sbk/Frazi/Zapis.wav
+	wave	Povtor		D:/sbk/Frazi/Povtor.wav
+	wave	Plus		D:/sbk/Frazi/Plus.wav
+	wave	Minus		D:/sbk/Frazi/Minus.wav
+	wave	Nomer		D:/sbk/Frazi/Nomer.wav
+	wave	Piesi		D:/sbk/Frazi/Piesi.wav
+	wave	Desiatki	D:/sbk/Frazi/Desiatki.wav
+	wave	Edinici		D:/sbk/Frazi/Edinici.wav
+	wave	Noll		D:/sbk/Frazi/Noll.wav
+	wave	Odin		D:/sbk/Frazi/Odin.wav
+	wave	Dva		D:/sbk/Frazi/Dva.wav
+	wave	Tri		D:/sbk/Frazi/Tri.wav
+	wave	Cheture		D:/sbk/Frazi/Cheture.wav
+	wave	Piati		D:/sbk/Frazi/Piati.wav
+	wave	Shest		D:/sbk/Frazi/Shest.wav
+	wave	Semi		D:/sbk/Frazi/Semi.wav
+	wave	Vosemi		D:/sbk/Frazi/Vosemi.wav
+	wave	Deviati		D:/sbk/Frazi/Deviati.wav
+	wave	Variant		D:/sbk/Frazi/Variant.wav
+	wave	Vibor		D:/sbk/Frazi/Vibor.wav
+	wave	Instrum		D:/sbk/Frazi/Instrum.wav
+	wave	Igri		D:/sbk/Frazi/Igri.wav
+	wave	Zvuchani	D:/sbk/Frazi/Zvuchani.wav
+'	wave	Net		D:/sbk/Frazi/Net.wav
+	end
+
+envelope Frazi
+	sustain		1	1
+	p		0	0
+	p		127	100
+	end
+
+' 1 ************************************	
+keymap	Pomoshk
+	region	C-4	C-4
+	keybase	C-4
+	detune 	0
+	end
+	
+sound	Pomoshs
+	volume		115
+	pan		0
+	use		Pomosh
+	venvelope	Frazi
+	keymap		Pomoshk
+	end
+
+' 2 ************************************	
+keymap	Gromkostk
+	region	C#4	C#4	
+	keybase	C#4	
+	detune	0
+	end
+
+sound	Gromkosts
+	volume		115
+	pan		0
+	use		Gromkost
+	venvelope	Frazi
+	keymap		Gromkostk
+	end
+
+' 3 ************************************	
+keymap	Tempk
+	region	D-4	D-4
+	keybase	D-4
+	detune	0
+	end
+
+sound	Temps
+	volume		115
+	pan		0
+	use		Temp
+	venvelope	Frazi
+	keymap		Tempk
+	end
+
+' 4 ************************************	
+keymap	Tonalnosk
+	region	D#4	D#4
+	keybase	D#4
+	detune	0
+	end
+	
+	
+sound	Tonalnoss
+	volume		115
+	pan		0
+	use		Tonalnos
+	venvelope	Frazi
+	keymap		Tonalnosk
+	end
+
+' 5 ************************************	
+keymap	Startk
+	region	E-4	E-4
+	keybase	E-4
+	detune 	0
+	end
+	
+sound	Starts
+	volume		115
+	pan		0
+	use		Start
+	venvelope	Frazi
+	keymap		Startk
+	end
+
+' 6 ************************************	
+keymap	Stopk
+	region	F-4	F-4
+	keybase	F-4
+	detune	0
+	end
+
+sound	Stops
+	volume		115
+	pan		0
+	use		Stop
+	venvelope	Frazi
+	keymap		Stopk
+	end
+
+' 7 ************************************	
+keymap	Pauzak
+	region	F#4	F#4	
+	keybase	F#4	
+	detune	0
+	end
+
+sound	Pauzas
+	volume		115
+	pan		0
+	use		Pauza
+	venvelope	Frazi
+	keymap		Pauzak
+	end
+
+' 8 ************************************	
+keymap	Zapisk
+	region	G-4	G-4	
+	keybase	G-4	
+	detune	0
+	end
+	
+sound	Zapiss
+	volume		115
+	pan		0
+	use		Zapis
+	venvelope	Frazi
+	keymap		Zapisk
+	end
+
+' 9 ************************************	
+keymap	Povtork
+	region	G#4	G#4
+	keybase	G#4
+	detune 	0
+	end
+	
+sound	Povtors
+	volume		115
+	pan		0
+	use		Povtor
+	venvelope	Frazi
+	keymap		Povtork
+	end
+
+' 10 ************************************	
+keymap	Plusk
+	region	A-4	A-4
+	keybase	A-4
+	detune	0
+	end
+
+sound	Pluss
+	volume		115
+	pan		0
+	use		Plus
+	venvelope	Frazi
+	keymap		Plusk
+	end
+
+' 11 ************************************	
+keymap	Minusk
+	region	A#4	A#4	
+	keybase	A#4	
+	detune	0
+	end
+
+sound	Minuss
+	volume		115
+	pan		0
+	use		Minus
+	venvelope	Frazi
+	keymap		Minusk
+	end
+
+' 12 ************************************	
+keymap	Nomerk
+	region	B-4	B-4
+	keybase	B-4
+	detune	0
+	end
+	
+	
+sound	Nomers
+	volume		115
+	pan		0
+	use		Nomer
+	venvelope	Frazi
+	keymap		Nomerk
+	end
+
+' 13 ************************************	
+keymap	Piesik
+	region	C-5	C-5	
+	keybase	C-5	
+	detune 	0
+	end
+	
+sound	Piesis
+	volume		115
+	pan		0
+	use		Piesi
+	venvelope	Frazi
+	keymap		Piesik
+	end
+
+' 14 ************************************	
+keymap	Desiatkik
+	region	C#5	C#5	
+	keybase	C#5	
+	detune	0
+	end
+
+sound	Desiatkis
+	volume		115
+	pan		0
+	use		Desiatki
+	venvelope	Frazi
+	keymap		Desiatkik
+	end
+
+' 15 ************************************	
+keymap	Edinicik
+	region	D-5	D-5	
+	keybase	D-5	
+	detune	0
+	end
+
+sound	Edinicis
+	volume		115
+	pan		0
+	use		Edinici
+	venvelope	Frazi
+	keymap		Edinicik
+	end
+
+' 16 ************************************	
+keymap	Nollk
+	region	D#5	D#5	
+	keybase	D#5	
+	detune	0
+	end
+
+sound	Nolls
+	volume		115
+	pan		0
+	use		Noll
+	venvelope	Frazi
+	keymap		Nollk
+	end
+
+' 17 ************************************	
+keymap	Odink
+	region	E-5	E-5
+	keybase	E-5
+	detune	0
+	end
+	
+sound	Odins
+	volume		115
+	pan		0
+	use		Odin
+	venvelope	Frazi
+	keymap		Odink
+	end
+
+' 18 ************************************	
+keymap	Dvak
+	region	F-5	F-5
+	keybase	F-5
+	detune 	0
+	end
+	
+sound	Dvas
+	volume		115
+	pan		0
+	use		Dva
+	venvelope	Frazi
+	keymap		Dvak
+	end
+
+' 19 ************************************	
+keymap	Trik
+	region	F#5	F#5
+	keybase	F#5
+	detune	0
+	end
+
+sound	Tris
+	volume		115
+	pan		0
+	use		Tri
+	venvelope	Frazi
+	keymap		Trik
+	end
+
+' 20 ************************************	
+keymap	Cheturek
+	region	G-5	G-5	
+	keybase	G-5
+	detune	0
+	end
+
+sound	Chetures
+	volume		115
+	pan		0
+	use		Cheture
+	venvelope	Frazi
+	keymap		Cheturek
+	end
+
+' 21 ************************************	
+keymap	Piatik
+	region	G#5	G#5
+	keybase	G#5
+	detune	0
+	end
+	
+	
+sound	Piatis
+	volume		115
+	pan		0
+	use		Piati
+	venvelope	Frazi
+	keymap		Piatik
+	end
+
+' 22 ************************************	
+keymap	Shestk
+	region	A-5	A-5
+	keybase	A-5
+	detune 	0
+	end
+	
+sound	Shests
+	volume		115
+	pan		0
+	use		Shest
+	venvelope	Frazi
+	keymap		Shestk
+	end
+
+' 23 ************************************	
+keymap	Semik
+	region	A#5	A#5
+	keybase	A#5
+	detune	0
+	end
+
+sound	Semis	
+	volume		115
+	pan		0
+	use		Semi
+	venvelope	Frazi
+	keymap		Semik
+	end
+
+' 24 ************************************	
+keymap	Vosemik
+	region	B-5	B-5
+	keybase	B-5
+	detune	0
+	end
+
+sound	Vosemis
+	volume		115
+	pan		0
+	use		Vosemi
+	venvelope	Frazi
+	keymap		Vosemik
+	end
+
+' 25 ************************************	
+keymap	Deviatik
+	region	C-6	C-6
+	keybase	C-6
+	detune	0
+	end
+	
+sound	Deviatis
+	volume		115
+	pan		0
+	use		Deviati
+	venvelope	Frazi
+	keymap		Deviatik
+	end
+
+' 26 ************************************	
+keymap	Variantk
+	region	C#6	C#6	
+	keybase	C#6	
+	detune 	0
+	end
+	
+sound	Variants
+	volume		115
+	pan		0
+	use		Variant
+	venvelope	Frazi
+	keymap		Variantk
+	end
+
+' 27 ************************************	
+keymap	Vibork
+	region	D-6	D-6
+	keybase	D-6
+	detune	0
+	end
+
+sound	Vibors
+	volume		115
+	pan		0
+	use		Vibor
+	venvelope	Frazi
+	keymap		Vibork
+	end
+
+' 28 ************************************	
+keymap	Instrumk
+	region	D#6	D#6
+	keybase	D#6
+	detune	0
+	end
+
+sound	Instrums
+	volume		115
+	pan		0
+	use		Instrum
+	venvelope	Frazi
+	keymap		Instrumk
+	end
+
+' 29 ************************************	
+keymap	Igrik
+	region	E-6	E-6
+	keybase	E-6
+	detune	0
+	end
+	
+sound	Igris
+	volume		115
+	pan		0
+	use		Igri
+	venvelope	Frazi
+	keymap		Igrik
+	end
+
+' 30 ************************************	
+keymap	Zvuchanik
+	region	F-6	F-6
+	keybase	F-6
+	detune 	0
+	end
+	
+sound	Zvuchanis
+	volume		115
+	pan		0
+	use		Zvuchani
+	venvelope	Frazi
+	keymap		Zvuchanik
+	end
+
+'31 ************************************	
+'keymap	Netk
+'	region	F#6	F#6
+'	keybase	F#6
+'	detune	0
+'	end
+
+'sound	Nets
+'	volume		115
+'	pan		0
+'	use		Net
+'	venvelope	Frazi
+'	keymap		Netk
+'	end
+
+instrument	Frazi
+
+	sound	Pomoshs
+	sound	Gromkosts
+	sound	Temps
+	sound	Tonalnoss
+	sound	Starts
+	sound	Stops
+	sound	Pauzas
+	sound	Zapiss
+	sound	Povtors
+	sound	Pluss
+	sound	Minuss
+	sound	Nomers
+
+	sound	Piesis
+	sound	Desiatkis
+	sound	Edinicis
+	sound	Nolls
+	sound	Odins
+	sound	Dvas
+	sound	Tris
+	sound	Chetures
+	sound	Piatis
+	sound	Shests
+	sound	Semis
+	sound	Vosemis
+
+	sound	Deviatis
+	sound	Variants
+	sound	Vibors
+	sound	Instrums
+	sound	Igris
+	sound	Zvuchanis
+'	sound	Nets
+	end

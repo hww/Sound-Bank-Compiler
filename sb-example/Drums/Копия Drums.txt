@@ -1,0 +1,510 @@
+waves
+	wave	FatKick	 	D:/sbk/Drums/FatKick.wav
+	wave	RimShot		D:/sbk/Drums/RimShot.wav
+	wave	Snare		D:/sbk/Drums/Snare.wav
+	wave	Clap808		D:/sbk/Drums/Clap808.wav
+	wave	TightSnare		D:/sbk/Drums/TightSnare.wav
+	wave	RoomTom		D:/sbk/Drums/RoomTom.wav
+	wave	HHJazzTight	D:/sbk/Drums/HHJazzTight.wav
+	wave	HatPedal		D:/sbk/Drums/HatPedal.wav
+	wave	HHOpen		D:/sbk/Drums/HHOpen.wav
+	wave	Crash		D:/sbk/Drums/Crash.wav
+	wave	RidePing		D:/sbk/Drums/RidePing.wav
+	wave	RideBell		D:/sbk/Drums/RideBell.wav
+	wave	Tambourine	D:/sbk/Drums/Tambourine.wav
+	wave	Splash		D:/sbk/Drums/Splash.wav
+	wave	Maracas		D:/sbk/Drums/Maracas.wav
+	wave	Cabasa		D:/sbk/Drums/Cabasa.wav
+	wave	Cowbell		D:/sbk/Drums/Cowbell.wav
+	wave	Fingersnap		D:/sbk/Drums/Fingersnap.wav
+	wave	Woodblock		D:/sbk/Drums/Woodblock.wav
+	wave	Castanets		D:/sbk/Drums/Castanets.wav
+	wave	Triangle		D:/sbk/Drums/TriangleWaveDb5.wav
+	wave	MuteTriangle	D:/sbk/Drums/MuteTriangle.wav
+	wave	BellTree		D:/sbk/Drums/BellTree.wav
+	end
+
+envelope DrumsShort
+	sustain		1	1
+	p		0	0
+	p		127	100
+	end
+
+envelope DrumsLong
+	sustain		1	1
+	p		0	0
+	p		127	1000
+	end
+
+' 1 ************************************	
+keymap	FatKickk
+	region	C-3	C-3
+	keybase	C-3
+	detune 	0
+	end
+	
+sound	FatKicks
+	volume		115
+	pan		0
+	use		FatKick
+	venvelope	DrumsShort
+	keymap		FatKickk
+	end
+
+' 2 ************************************	
+keymap	RimShotk
+	region	C#3	C#3	
+	keybase	C#4	
+	detune	0
+	end
+
+sound	RimShots
+	volume		115
+	pan		0
+	use		RimShot
+	venvelope	DrumsShort
+	keymap		RimShotk
+	end
+
+' 3 ************************************	
+keymap	Snarek
+	region	D-3	D-3
+	keybase	D-3
+	detune	0
+	end
+
+sound	Snares
+	volume		115
+	pan		0
+	use		Snare
+	venvelope	DrumsShort
+	keymap		Snarek
+	end
+
+' 4 ************************************	
+keymap	Clap808k
+	region	D#3	D#3
+	keybase	D#4
+	detune	0
+	end
+	
+	
+sound	Clap808s
+	volume		115
+	pan		0
+	use		Clap808
+	venvelope	DrumsShort
+	keymap		Clap808k
+	end
+
+' 5 ************************************	
+keymap	TightSnarek
+	region	E-3	E-3
+	keybase	E-3
+	detune 	0
+	end
+	
+sound	TightSnares
+	volume		115
+	pan		0
+	use		TightSnare
+	venvelope	DrumsShort
+	keymap		TightSnarek
+	end
+
+' 6 ************************************	
+keymap	RoomTomk
+	region	F-3	F-3
+	keybase	C-4
+	detune	0
+	end
+
+sound	RoomToms
+	volume		115
+	pan		50
+	use		RoomTom
+	venvelope	DrumsShort
+	keymap		RoomTomk
+	end
+
+keymap	RoomTom2k
+	region	G-3	G-3
+	keybase	C-4
+	detune	0
+	end
+
+sound	RoomTom2s
+	volume		115
+	pan		30
+	use		RoomTom
+	venvelope	DrumsShort
+	keymap		RoomTom2k
+	end
+
+keymap	RoomTom3k
+	region	A-3	A-3
+	keybase	C-4
+	detune	0
+	end
+
+sound	RoomTom3s
+	volume		115
+	pan		10
+	use		RoomTom
+	venvelope	DrumsShort
+	keymap		RoomTom3k
+	end
+
+keymap	RoomTom4k
+	region	B-3	B-3
+	keybase	C-4
+	detune	0
+	end
+
+sound	RoomTom4s
+	volume		115
+	pan		-10
+	use		RoomTom
+	venvelope	DrumsShort
+	keymap		RoomTom4k
+	end
+
+keymap	RoomTom5k
+	region	C-4	C-4
+	keybase	C-4
+	detune	0
+	end
+
+sound	RoomTom5s
+	volume		115
+	pan		-30
+	use		RoomTom
+	venvelope	DrumsShort
+	keymap		RoomTom5k
+	end
+
+keymap	RoomTom6k
+	region	D-4	D-4
+	keybase	C-4
+	detune	0
+	end
+
+sound	RoomTom6s
+	volume		115
+	pan		-50
+	use		RoomTom
+	venvelope	DrumsShort
+	keymap		RoomTom6k
+	end
+
+' 7 ************************************	
+keymap	HHJazzTightk
+	region	F#3	F#3
+	keybase	F#3
+	detune	0
+	end
+
+sound	HHJazzTights
+	volume		115
+	pan		0
+	use		HHJazzTight
+	venvelope	DrumsShort
+	keymap		HHJazzTightk
+	end
+
+' 8 ************************************	
+keymap	HatPedalk
+	region	G#3	G#3	
+	keybase	G#3	
+	detune	0
+	end
+	
+sound	HatPedals
+	volume		115
+	pan		0
+	use		HatPedal
+	venvelope	DrumsShort
+	keymap		HatPedalk
+	end
+
+' 9 ************************************	
+keymap	HHOpenk
+	region	A#3	A#3
+	keybase	B3
+	detune 	0
+	end
+	
+sound	HHOpens
+	volume		115
+	pan		0
+	use		HHOpen
+	venvelope	DrumsShort
+	keymap		HHOpenk
+	end
+
+' 10 ************************************	
+keymap	Crashk
+	region	C#4	C#4
+	keybase	C#4
+	detune	0
+	end
+
+sound	Crashs
+	volume		115
+	pan		0
+	use		Crash
+	venvelope	DrumsLong
+	keymap		Crashk
+	end
+
+' 11 ************************************	
+keymap	RidePingk
+	region	D#4	E-4	
+	keybase	D#4	
+	detune	0
+	end
+
+sound	RidePings
+	volume		115
+	pan		0
+	use		RidePing
+	venvelope	DrumsLong
+	keymap		RidePingk
+	end
+
+' 12 ************************************	
+keymap	RideBellk
+	region	F-4	F-4
+	keybase	D-4
+	detune	0
+	end
+	
+	
+sound	RideBells
+	volume		115
+	pan		0
+	use		RideBell
+	venvelope	DrumsShort
+	keymap		RideBellk
+	end
+
+' 13 ************************************	
+keymap	Tambourinek
+	region	F#4	F#4	
+	keybase	F#4	
+	detune 	0
+	end
+	
+sound	Tambourines
+	volume		115
+	pan		0
+	use		Tambourine
+	venvelope	DrumsShort
+	keymap		Tambourinek
+	end
+
+' 14 ************************************	
+keymap	Splashk
+	region	G-4	G-4	
+	keybase	G-4	
+	detune	0
+	end
+
+sound	Splashs
+	volume		115
+	pan		0
+	use		Splash
+	venvelope	DrumsLong
+	keymap		Splashk
+	end
+
+' 15 ************************************	
+keymap	Maracask
+	region	G#4	G#4	
+	keybase	G#4	
+	detune	0
+	end
+
+sound	Maracass
+	volume		115
+	pan		0
+	use		Maracas
+	venvelope	DrumsShort
+	keymap		Maracask
+	end
+
+' 16 ************************************	
+keymap	Cabasak
+	region	A#4	A#4
+	keybase	A#4	
+	detune	0
+	end
+	
+	
+sound	Cabasas
+	volume		115
+	pan		30
+	use		Cabasa
+	venvelope	DrumsShort
+	keymap		Cabasak
+	end
+
+keymap	Cabasa2k
+	region	A#5	A#5
+	keybase	A#5	
+	detune	0
+	end
+	
+	
+sound	Cabasa2s
+	volume		115
+	pan		-30
+	use		Cabasa
+	venvelope	DrumsShort
+	keymap		Cabasa2k
+	end
+
+
+' 17 ************************************	
+keymap	Cowbellk
+	region	F#5	F#5
+	keybase	F#5
+	detune	0
+	end
+	
+	
+sound	Cowbells
+	volume		115
+	pan		0
+	use		Cowbell
+	venvelope	DrumsShort
+	keymap		Cowbellk
+	end
+
+' 18 ************************************	
+keymap	Fingersnapk
+	region	G#5	G#5
+	keybase	G#5
+	detune 	0
+	end
+	
+sound	Fingersnaps
+	volume		115
+	pan		0
+	use		Fingersnap
+	venvelope	DrumsShort
+	keymap		Fingersnapk
+	end
+
+' 19 ************************************	
+keymap	Woodblockk
+	region	E-6	F-6
+	keybase	E-6
+	detune	0
+	end
+
+sound	Woodblocks
+	volume		115
+	pan		0
+	use		Woodblock
+	venvelope	DrumsShort
+	keymap		Woodblockk
+	end
+
+' 20 ************************************	
+keymap	Castanetsk
+	region	G#6	A6
+	keybase	G#6
+	detune	0
+	end
+
+sound	Castanetss
+	volume		115
+	pan		0
+	use		Castanets
+	venvelope	DrumsShort
+	keymap		Castanetsk
+	end
+
+' 21 ************************************	
+keymap	Trianglek
+	region	A#6	A#6
+	keybase	A#6
+	detune	0
+	end
+	
+	
+sound	Triangles
+	volume		115
+	pan		0
+	use		Triangle
+	venvelope	DrumsShort
+	keymap		Trianglek
+	end
+
+' 22 ************************************	
+keymap	MuteTrianglek
+	region	B-6	B-6
+	keybase	G-6
+	detune 	0
+	end
+	
+sound	MuteTriangles
+	volume		115
+	pan		0
+	use		MuteTriangle
+	venvelope	DrumsShort
+	keymap		MuteTrianglek
+	end
+
+' 23 ************************************	
+keymap	BellTreek
+	region	C-7	C-8
+	keybase	G7
+	detune	0
+	end
+
+sound	BellTrees
+	volume		115
+	pan		0
+	use		BellTree
+	venvelope	DrumsShort
+	keymap		BellTreek
+	end
+
+
+instrument	Drums
+
+	sound	FatKicks
+	sound	RimShots
+	sound	Snares
+	sound	Clap808s
+	sound	TightSnares
+	sound	RoomToms
+	sound	HatPedals
+	sound	RoomTom2s
+	sound	HHOpens
+	sound	RoomTom3s
+	sound	HHJazzTights
+	sound	RoomTom4s
+
+	sound	RoomTom5s
+	sound	Crashs
+	sound	RoomTom6s
+	sound	RidePings
+	sound	RideBells
+	sound	Tambourines
+	sound	Splashs
+	sound	Maracass
+	sound	Cabasas
+	sound	Cabasa2s
+	sound	Cowbells
+	sound	Fingersnaps
+
+	sound	Woodblocks
+	sound	Castanetss
+	sound	Triangles
+	sound	MuteTriangles
+	sound	BellTrees
+	
+	end

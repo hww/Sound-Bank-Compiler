@@ -1,0 +1,29 @@
+waves
+	wave	Rhodes1		D:\sbk\EPiano\Rhodes1.wav
+	end
+
+envelope EPiano
+sustain	2	2
+	p	127	690	' attack value / hold time	
+	p	127	5760	' hold value / decay time
+	p	5	100	' sustain val / release time
+	end
+
+' 1 ************************************	
+keymap	Rhodes1k
+	region	C-3	E7
+	keybase	C-6
+	detune 	0
+	end
+	
+sound	Rhodes1s
+	volume		115
+	pan		0
+	venvelope             	EPiano
+	use	Rhodes1
+	keymap		Rhodes1k
+	end
+
+instrument	EPiano
+	sound	Rhodes1s
+	end

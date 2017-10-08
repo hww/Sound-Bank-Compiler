@@ -1,0 +1,30 @@
+waves
+	wave	Violin	d:/sbk/Violin/VAS1LGFF4F-L.wav
+	end
+
+envelope Violin
+	sustain		1	1
+	p		0	0
+	p		127	100
+	end
+
+
+' 1 ************************************	
+keymap	Violink
+	region	C-3	F-7
+	keybase	F#6
+	detune	0
+	end
+
+sound	Violins
+	volume		115
+	pan		0
+	use		Violin
+	venvelope	Violin
+	keymap		Violink
+	end
+
+
+instrument	Violin
+	sound	Violins
+	end

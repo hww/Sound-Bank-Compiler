@@ -1,0 +1,30 @@
+waves
+	wave	Taiko	D:\sbk\Taiko\TaikoDrum.wav
+	end
+
+envelope Taiko
+	sustain		1	1
+	p		0	0
+	p		127	200
+	end
+
+
+' 1 ************************************	
+keymap	Taikok
+	region	C-3	C-8
+	keybase	B-7
+	detune	0
+	end
+
+sound	Taikos
+	volume		115
+	pan		0
+	use		Taiko
+	venvelope	Taiko
+	keymap		Taikok
+	end
+
+
+instrument	Taiko
+	sound	Taikos
+	end

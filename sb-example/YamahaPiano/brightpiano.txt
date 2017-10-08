@@ -1,0 +1,248 @@
+'*************************************************
+' Gpiano samples		            
+'*************************************************
+
+waves 
+	wave	C5A0w 	d:/sbk/YamahaPiano/C5A0FLP.wav 
+	wave	C5D1w	d:/sbk/YamahaPiano/C5D1FLP.wav 
+	wave	C5G1w	d:/sbk/YamahaPiano/C5G1FLP.wav 
+	wave	C5F2w	d:/sbk/YamahaPiano/C5F2FLP.wav 
+	wave	C5D#3w	d:/sbk/YamahaPiano/C5D#3FLP.wav 
+	wave	C5G#3w	d:/sbk/YamahaPiano/C5G#3FLP.wav 
+	wave	C5F#4w	d:/sbk/YamahaPiano/C5F#4FLP.wav 
+	wave	C5B4w	d:/sbk/YamahaPiano/C5B4FLP.wav 
+end 
+
+'*************************************************
+' Gpiano   keymaps		              	 
+'*************************************************
+
+keymap A1B2k
+   region                 A-1   B-2 
+   keyBase               A-2 
+   detune                0 
+end 
+
+keymap C3F#3k
+   region                 C-3   F#3 
+   keyBase               D-3 
+   detune                0 
+end
+
+keymap G3C#4k
+   region                 G-3   C#4 
+   keyBase               G-3 
+   detune                0 
+end
+
+keymap D4B4k
+   region                 D-4   B-4 
+   keyBase               F-4 
+   detune                0 
+end   
+
+keymap C5E5k
+   region                 C-5   E-5 
+   keyBase               D#5 
+   detune                0 
+end 
+
+keymap F5C#6k
+   region                 F-5   C#6 
+   keyBase               G#5 
+   detune                0 
+end 
+
+keymap D6G6k
+   region                 D-6   G-6 
+   keyBase               F#6 
+   detune                0 
+end 
+
+keymap G#6G#7k
+   region                 G#6   G#7 
+   keyBase               B-6 
+   detune                0 
+end 
+
+keymap A7F#8k
+   region                A-7   F#8 
+   keyBase               B-6 
+   detune                0 
+end 
+
+keymap G8C9k
+   region                G-8   C-9 
+   keyBase               B-6 
+   detune                0 
+end 
+
+'*************************************************
+' Envelope
+'*************************************************
+
+envelope G8C9e
+	sustain	2	2
+	p	127	450	' attack value / hold time	
+	p	127	3840	' hold value /  decay time
+	p	5	100	' sustain val /release time
+	end
+
+envelope A7F#8e
+	sustain	2	2
+	p	127	690	' attack value / hold time	
+	p	127	5760	' hold value / decay time
+	p	5	100	' sustain val / release time
+	end
+
+envelope G#6G#7e
+	sustain	2	2
+	p	127	1390	' attack value / hold time	
+	p	127	9598	' hold value / decay time
+	p	5	100	' sustain val / release time
+	end
+
+envelope D6G6e
+	sustain	2	2
+	p	127	1260	' attack value / hold time	
+	p	127	13441	' hold value / decay time
+	p	5	100	' sustain val / release time
+	end
+
+envelope F5C#6e
+	sustain	2	2
+	p	127	1820	' attack value / hold time	
+	p	127	17281	' hold value / decay time
+	p	5	100	' sustain val / release time
+end
+
+envelope C5E5e
+	sustain	2	2
+	p	127	1950	' attack value / hold time	
+	p	127	24005	' hold value / decay time
+	p	5	100	' sustain val / release time
+end
+
+envelope D4B4e
+	sustain	2	2
+	p	127	2440	' attack value / hold time	
+	p	127	28514	' hold value / decay time
+	p	5	100	' sustain val / release time
+end
+
+envelope G3C#4e
+	sustain	2	2
+	p	127	5131	' attack value / hold time	
+	p	127	33597	' hold value / decay time
+	p	5	100	' sustain val / release time
+end
+
+envelope C3F#3e
+	sustain	2	2
+	p	127	5509	' attack value / hold time	
+	p	127	38400	' hold value / decay time
+	p	5	100	' sustain val / release time
+end
+
+envelope A1B2e
+	sustain	2	2
+	p	127	3961	' attack value / hold time	
+	p	127	38393	' hold value / decay time
+	p	5	100	' sustain val / release time
+end
+
+
+'*************************************************
+' Sounds
+'*************************************************
+
+sound G8C9s
+	pan		      20
+	keymap                G8C9k
+	venvelope             G8C9e
+	use                   C5B4w
+	end 
+
+sound A7F#8s
+	pan		      15
+	keymap                A7F#8k 
+	venvelope             A7F#8e
+	use                   C5B4w
+	end 
+
+sound G#6G#7s
+	pan		      10
+	keymap                G#6G#7k 
+	venvelope             G#6G#7e 
+	use                   C5B4w
+	end 
+
+sound D6G6e
+	pan		      5
+	keymap                D6G6k
+	venvelope             D6G6e
+	use                   C5F#4w
+	end
+
+sound F5C#6s
+	pan		      0
+	keymap                F5C#6k
+ 	venvelope             F5C#6e 
+	use                   C5G#3w
+	end  
+
+sound C5E5s
+	pan		      -5
+	keymap                C5E5k
+	venvelope             C5E5e
+	use                   C5D#3w
+	end 
+
+sound D4B4s
+	pan		      -10
+	keymap                D4B4k 
+	venvelope             D4B4e
+	use                   C5F2w
+	end 
+
+sound G3C#4s
+	pan		      -15
+	keymap                G3C#4k
+	venvelope             G3C#4e 
+	use                   C5G1w
+	end 
+
+sound C3F#3s
+	pan		      -20
+	keymap                C3F#3k
+	venvelope             C3F#3e
+	use                   C5D1w
+	end 
+
+sound A1B2s
+	pan		      -25
+	keymap                A1B2k
+	venvelope             A1B2e
+	use                   C5A0w
+	end 
+
+'*************************************************
+' 
+'*************************************************
+
+
+instrument brightpiano 
+	bendrange 	200 
+	priority        5 
+	sound           A1B2s 
+	sound           C3F#3s 
+	sound           G3C#4s 
+	sound           D4B4s 
+	sound           C5E5s 
+	sound           F5C#6s 
+	sound           D6G6e 
+	sound           G#6G#7s 
+	sound           A7F#8s 
+	sound		G8C9s 
+	end
+

@@ -1,0 +1,150 @@
+waves
+	wave	A3Oboe 	d:/sbk/Oboe/A3_Oboe_Sft.wav
+	wave	C3Oboe	d:/sbk/Oboe/C3_Oboe_Sft_1.wav
+	wave	C4Oboe 	d:/sbk/Oboe/C4_Oboe_Sft_1.wav
+	wave	C5Oboe 	d:/sbk/Oboe/C5_Oboe_Sft.wav
+	wave	E3Oboe 	d:/sbk/Oboe/E3_Oboe_Sft_1.wav
+	wave	E4Oboe d:/sbk/Oboe/E4_Oboe_Sft.wav
+	wave	E5Oboe 	d:/sbk/Oboe/E5_Oboe_Sft.wav
+	wave	G#4Oboe	d:/sbk/Oboe/G#4_Oboe_Sft_1.wav
+	end
+	
+envelope oboee
+	sustain	2	2
+	p	127	1000	' hold
+	p	127	990	' decay
+	p	90	289	' sus - release
+	end
+	
+' 1 ************************************	
+
+keymap	OboeA1D5k
+	region	A-1	D-5
+	keybase	C-5
+	end
+	
+sound	OboeA1D5s
+	volume		120
+	pan		20
+	use		C3Oboe
+	venvelope	oboee
+	keymap		OboeA1D5k
+	end
+
+' 2 ************************************	
+
+keymap	OboeD#5F#5k
+	region	D#5	F#5
+	keybase	E-5
+	end
+
+sound	OboeD#5F#5s
+	volume		120
+	pan		5
+	use		E3Oboe
+	venvelope	oboee
+	keymap		OboeD#5F#5k
+	end
+
+' 3 ************************************	
+
+keymap	OboeG5A#5k
+	region	G-5	A#5
+	keybase	A-5
+	end
+
+sound	OboeG5A#5s
+	volume		120
+	pan		0
+	use		A3Oboe
+	venvelope	oboee
+	keymap		OboeG5A#5k
+	end
+
+' 4 ************************************	
+
+keymap	OboeB5D6k
+	region	B-5	D-6
+	keybase	C-6
+	end
+
+sound	OboeB5D6s
+	volume		120
+	pan		-5
+	use		C4Oboe
+	venvelope	oboee
+	keymap		OboeB5D6k
+	end
+
+' 5 ************************************	
+
+keymap	OboeD#6F#6k
+	region	D#6	F#6
+	keybase	E-6
+	detune	-14
+	end
+
+sound	OboeD#6F#6s
+	volume		120
+	pan		-10
+	use		E4Oboe
+	venvelope	oboee
+	keymap		OboeD#6F#6k
+	end
+
+' 6 ************************************	
+
+keymap	OboeG6A#6k
+	region	G-6	A#6
+	keybase	G#6
+	end
+
+sound	OboeG6A#6s
+	volume		120
+	pan		-15
+	use		G#4Oboe
+	venvelope	oboee
+	keymap		OboeG6A#6k
+	end
+
+' 7 ************************************	
+
+keymap	OboeB6B7k
+	region	B-6	B-7
+	keybase	C-7
+	end
+
+sound	OboeB6B7s
+	volume		120
+	pan		-20
+	use		C5Oboe
+	venvelope	oboee
+	keymap		OboeB6B7k
+	end
+
+' 8 ************************************	
+
+keymap	OboeD#7C9k
+	region	D#7	C-9
+	keybase	E-7
+	end
+
+sound	OboeD#7C9s
+	volume		120
+	pan		-20
+	use		E5Oboe
+	venvelope	oboee
+	keymap		OboeD#7C9k
+	end
+		
+instrument	Oboe
+	sound	OboeA1D5s
+	sound	OboeD#5F#5s
+	sound	OboeG5A#5s
+	sound	OboeB5D6s
+	sound	OboeD#6F#6s
+	sound	OboeG6A#6s
+	sound	OboeB6B7s
+	sound	OboeD#7C9s
+	end
+

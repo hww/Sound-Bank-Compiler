@@ -1,0 +1,30 @@
+waves
+	wave	RevCimbal		D:\sbk\RevCimbal\RevCimbal.wav
+	end
+
+envelope RevCimbal
+	sustain		1	1
+	p		0	0
+	p		127	200
+	end
+
+
+' 1 ************************************	
+keymap	RevCimbalk
+	region	C-3	C-8
+	keybase	C-5
+	detune	0
+	end
+
+sound	RevCimbals
+	volume		115
+	pan		0
+	use		RevCimbal
+	venvelope	RevCimbal
+	keymap		RevCimbalk
+	end
+
+
+instrument	RevCimbal
+	sound	RevCimbals
+	end

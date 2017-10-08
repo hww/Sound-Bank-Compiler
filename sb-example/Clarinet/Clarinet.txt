@@ -1,0 +1,28 @@
+waves
+	wave	G#3Clarinet 	d:/sbk/Clarinet/G#3Clarinet.wav
+	end
+
+' 1 ************************************	
+
+keymap	G#3Clarinetk
+	region	C-3	C-8
+	keybase	G#6
+	detune 	0
+	end
+	
+sound	G#3Clarinets
+	volume		120
+	pan		0
+	use		G#3Clarinet
+	fadeout		325
+	keymap		G#3Clarinetk
+	end
+
+instrument	Clarinet
+	vibtype		1
+	vibdelay	801
+	vibdepth	8
+	vibrate		300	
+	sound	G#3Clarinets
+	end
+

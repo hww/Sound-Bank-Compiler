@@ -1,0 +1,30 @@
+waves
+	wave	PanFlute	D:\sbk\Flute\PanFluteG3.wav
+	end
+
+envelope PanFlute
+	sustain		1	1
+	p		0	1
+	p		127	200
+	end
+
+
+' 1 ************************************	
+keymap	PanFlutek
+	region	C-3	F-7
+	keybase	F-6
+	detune	0
+	end
+
+sound	PanFlutes
+	volume		115
+	pan		0
+	use		PanFlute
+	venvelope	PanFlute
+	keymap		PanFlutek
+	end
+
+
+instrument	PanFlute
+	sound	PanFlutes
+	end

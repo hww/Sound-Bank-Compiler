@@ -1,0 +1,2 @@
+sbc -Omidi.sbk 01.mid 02.mid 03.mid 04.mid 05.mid 06.mid 07.mid 08.mid 09.mid 10.mid 11.mid 12.mid 13.mid 14.mid 15.mid 16.mid 17.mid 18.mid 19.mid 20.mid 21.mid 22.mid 23.mid 24.mid 25.mid 26.mid 27.mid 28.mid 29.mid 30.mid 31.mid 32.mid 33.mid 34.mid 35.mid 36.mid 37.mid 38.mid 39.mid 40.mid 41.mid 42.mid 
+copy midi.sbk ..\midi.sbk

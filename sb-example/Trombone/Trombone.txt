@@ -1,0 +1,35 @@
+waves
+	wave	Trombone		D:\sbk\Trombone\TromboneG3.wav
+
+	end
+
+envelope Trombone
+	sustain		1	1
+	p		0	0 
+	p		127	100
+	end
+	
+' 1 ***************************************************
+	
+keymap	Trombonek
+	region	C-3	F7
+	keybase	F#6
+	detune	0
+	end
+
+sound	Trombones
+	pan		0
+	use		Trombone
+	venvelope	Trombone
+	keymap		Trombonek
+	end
+	
+instrument	Trombone
+	vibtype		1
+	vibdelay	801
+	vibdepth	5
+	vibrate		250	'4hz	
+
+	sound		Trombones
+
+	end

@@ -1,0 +1,30 @@
+waves
+	wave	Harpsichord	D:\sbk\Harpsichord\HarpsichordE.wav
+	end
+
+envelope Harpsichord
+	sustain	2	2
+	p	127	50	' attack value / hold time	
+	p	100	3000	' hold value / decay time
+	p	0	100	' sustain val / release time
+	end
+
+' 1 ************************************	
+keymap	Harpsichordk
+	region	C-3	C-8
+	keybase	C-7
+	detune	7
+	end
+
+sound	Harpsichords
+	volume		115
+	pan		0
+	use		Harpsichord
+	venvelope	Harpsichord
+	keymap		Harpsichordk
+	end
+
+
+instrument	Harpsichord
+	sound	Harpsichords
+	end

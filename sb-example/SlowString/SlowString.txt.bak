@@ -1,0 +1,121 @@
+waves
+	wave	STORSUSF51 	d:/sbk/SlowString/STORSUSF51-R(L).wav
+	wave	STORSUSF61	d:/sbk/SlowString/STORSUSF61-R(L).wav
+	wave	STORSUSF71 	d:/sbk/SlowString/STORSUSF71-R1(L).wav
+	wave	STORSUSF81 	d:/sbk/SlowString/STORSUSF81-R(L).wav
+	end
+
+envelope slowstringe
+	sustain		1	1
+	p		0	1000
+	p		127	480
+	end
+	
+envelope stringe
+	sustain		1	1
+	p		0	1
+	p		127	480
+	end
+' 1 ************************************	
+keymap	slowstring_C0G4k
+	region	C-0	G-4
+	keybase	D#4
+	detune 	-3
+	end
+	
+sound	slowstring_C0G4s
+	volume		115
+	pan		20
+	use		STORSUSF51
+	venvelope	slowstringe
+	keymap		slowstring_C0G4k
+	end
+
+sound	string_C0G4s
+	volume		115
+	pan		20
+	use		STORSUSF51
+	venvelope	stringe
+	keymap		slowstring_C0G4k
+	end
+' 2 ************************************	
+keymap	slowstring_G#4F5k
+	region	G#4	F-5
+	keybase	C#5
+	detune	7
+	end
+
+sound	slowstring_G#4F5s
+	volume		115
+	pan		5
+	use		STORSUSF61
+	venvelope	slowstringe
+	keymap		slowstring_G#4F5k
+	end
+
+sound	string_G#4F5s
+	volume		115
+	pan		5
+	use		STORSUSF61
+	venvelope	stringe
+	keymap		slowstring_G#4F5k
+	end
+' 3 ************************************	
+keymap	slowstring_F#5D#6k
+	region	F#5	D#6
+	keybase	B-5
+	detune	-3
+	end
+
+sound	slowstring_F#5D#6s
+	volume		115
+	pan		-5
+	use		STORSUSF71
+	venvelope	slowstringe
+	keymap		slowstring_F#5D#6k
+	end
+
+sound	string_F#5D#6s
+	volume		115
+	pan		-5
+	use		STORSUSF71
+	venvelope	stringe
+	keymap		slowstring_F#5D#6k
+	end
+' 4 ************************************	
+keymap	slowstring_E6B8k
+	region	E-6	B-8
+	keybase	A-6
+	detune	-3
+	end
+	
+	
+sound	slowstring_E6B8s
+	volume		115
+	pan		-20
+	use		STORSUSF81
+	venvelope	slowstringe
+	keymap		slowstring_E6B8k
+	end
+
+sound	string_E6B8s
+	volume		115
+	pan		-20
+	use		STORSUSF81
+	venvelope	stringe
+	keymap		slowstring_E6B8k
+	end
+	
+instrument	SlowString
+	sound	slowstring_C0G4s
+	sound	slowstring_G#4F5s
+	sound	slowstring_F#5D#6s
+	sound	slowstring_E6B8s
+	end
+
+instrument	String
+	sound	string_C0G4s
+	sound	string_G#4F5s
+	sound	string_F#5D#6s
+	sound	string_E6B8s
+	end

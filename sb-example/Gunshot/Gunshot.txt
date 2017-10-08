@@ -1,0 +1,30 @@
+waves
+	wave	Gunshot		D:\sbk\Gunshot\Gunshot.wav
+	end
+
+envelope 	Gunshot
+	sustain		1	1
+	p		0	0
+	p		127	200
+	end
+
+
+' 1 ************************************	
+keymap	Gunshotk
+	region	C-3	C-8
+	keybase	G-8
+	detune	0
+	end
+
+sound	Gunshots
+	volume		115
+	pan		0
+	use		Gunshot
+	venvelope	Gunshot
+	keymap		Gunshotk
+	end
+
+
+instrument	Gunshot
+	sound	Gunshots
+	end

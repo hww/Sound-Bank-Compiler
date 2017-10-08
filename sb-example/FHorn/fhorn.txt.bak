@@ -1,0 +1,91 @@
+waves
+	wave	FHORN_SUSF382 	d:/sbk/FHorn/FHORN_SUSF382.wav
+	wave	FHORN_SUSF481 	d:/sbk/FHorn/FHORN_SUSF481.wav
+	wave	FHORN_SUSF581 	d:/sbk/FHorn/FHORN_SUSF581.wav
+	wave	FHORN_SUSF681 	d:/sbk/FHorn/FHORN_SUSF681.wav
+	end
+
+envelope fhorne
+	sustain		1	1
+	p		127	2200 
+	p		90	356
+	end
+	
+' 1 ***************************************************
+
+keymap	fhorn_C0F#3k
+	region	C-0	F#3
+	keybase	D-3
+	end
+	
+sound	fhorn_C0F#3s
+	pan		20
+	use		FHORN_SUSF382
+	venvelope	fhorne
+	keymap		fhorn_C0F#3k
+	end
+	
+' 2 ***************************************************
+
+keymap	fhorn_G3F4k
+	region	G-3	F-4
+	keybase	C-4
+	end
+
+sound	fhorn_G3F4s
+	pan		5
+	use		FHORN_SUSF481
+	venvelope	fhorne
+	keymap		fhorn_G3F4k
+	vibtype		1
+	vibdelay	801
+	vibdepth	5
+	vibrate		250	'4hz	
+	end
+
+' 3 ***************************************************
+	
+keymap	fhorn_F#4D#5k
+	region	F#4	D#5
+	keybase	A#4
+	end
+
+sound	fhorn_F#4D$5s
+	pan		-5
+	use		FHORN_SUSF581
+	venvelope	fhorne
+	keymap		fhorn_F#4D#5k
+	vibtype		1
+	vibdelay	801
+	vibdepth	5
+	vibrate		250	'4hz	
+	end
+	
+keymap	fhorn_E5F7k
+	region	E-5	F-7
+	keybase	G#5
+	end
+	
+' 4 ***************************************************
+	
+sound	fhorn_E5F7s
+	pan		-20
+	use		FHORN_SUSF681
+	venvelope	fhorne
+	keymap		fhorn_E5F7k
+	vibtype		1
+	vibdelay	801
+	vibdepth	5
+	vibrate		250	'4hz	
+	end
+	
+instrument	FrenchHorn
+	vibtype		1
+	vibdelay	801
+	vibdepth	5
+	vibrate		250	'4hz	
+	sound		fhorn_C0F#3s
+	sound		fhorn_G3F4s
+	sound		fhorn_F#4D$5s
+	sound		fhorn_E5F7s
+	end

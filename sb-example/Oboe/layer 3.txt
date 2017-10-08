@@ -1,0 +1,19 @@
+Text description by Awave Studio v7.0, Copyright © 1993, 2000 FMJ-Software
+--------------------------------------------------------------------------
+Source file: 'D:\Sonido_GM_12MB.sf2'
+Source type: Emu Sound Font
+
+Item:	layer 'layer 3'
+
+		keyrange	root	waveform
+		A1..D5   	C5	'C3 Oboe Sft        1'
+		D#5..D#5   	E5	'E3 Oboe Sft        1'
+		E5..F#5   	E5	'E3 Oboe Sft        1'
+		G5..A#5   	A5	'A3 Oboe Sft'
+		B5..D6   	C6	'C4 Oboe Sft        1'
+		D#6..F#6   	E6	'E4 Oboe Sft'
+		G6..A#6   	G#6	'G#4 Oboe Sft       1'
+		B6..D7   	C7	'C5 Oboe Sft'
+		D#7..C9   	E7	'E5 Oboe Sft'
+
+Total size: 142 KB

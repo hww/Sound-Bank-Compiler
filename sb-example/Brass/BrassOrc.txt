@@ -1,0 +1,50 @@
+waves
+	wave	BRASORCH59 	D:\sbk\Brass\BRASORCH59.wav
+	wave	SynBrassG2	D:\sbk\Brass\SynBrassG2.wav
+	end
+
+envelope Brass
+	sustain		1	1
+	p		127	13500
+	p		0	100
+	end
+
+' 1 ************************************	
+keymap	BRASORCH59k
+	region	C-3	E-7
+	keybase	B-5
+	detune 	0
+	end
+	
+sound	BRASORCH59s
+	volume		115
+	pan		0
+	use		BRASORCH59
+	venvelope	Brass
+	keymap		BRASORCH59k
+	end
+
+' 2 ************************************	
+keymap	SynBrassG2k
+	region	C-3	C-7
+	keybase	F-5
+	detune 	-49
+	end
+	
+sound	SynBrassG2s
+	volume		115
+	pan		0
+	use		SynBrassG2
+	venvelope	Brass
+	keymap		SynBrassG2k
+	end
+
+instrument	Brass
+	sound	BRASORCH59s
+
+	end
+
+instrument	SynBrass
+	
+	sound	SynBrassG2s
+	end

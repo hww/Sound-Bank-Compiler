@@ -1,0 +1,31 @@
+waves
+	wave		Harp	D:\sbk\Harp\HarpE2.wav
+	end
+
+envelope 	Harp
+	sustain	2	2
+	p	127	1390	' attack value / hold time	
+	p	127	9598	' hold value / decay time
+	p	5	300	' sustain val / release time
+	end
+
+
+' 1 ************************************	
+keymap	Harpk
+	region	C-3	C-8
+	keybase	C#7
+	detune	0
+	end
+
+sound	Harps
+	volume		115
+	pan		0
+	use		Harp
+	venvelope	Harp
+	keymap		Harpk
+	end
+
+
+instrument	Harp
+	sound	Harps
+	end

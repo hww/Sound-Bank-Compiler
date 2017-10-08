@@ -1,0 +1,30 @@
+waves
+	wave	Choir		D:\sbk\Choir\AahsF3.wav
+	end
+
+envelope	Choir
+	sustain		1	1
+	p		0	1000
+	p		127	200
+	end
+	
+
+
+' 1 ************************************	
+keymap	Choirk
+	region	C-3	C-8
+	keybase	G-6
+	detune	46
+	end
+
+sound	Choirs
+	volume		115
+	pan		0
+	use		Choir
+	venvelope	Choir
+	keymap		Choirk
+	end
+
+instrument	Choir
+	sound	Choirs
+	end

@@ -1,0 +1,30 @@
+waves
+	wave	OrchHit		D:\sbk\OrchHit\OrchHitC4.wav
+	end
+
+envelope OrchHit
+	sustain		1	1
+	p		0	0
+	p		127	1000
+	end
+
+
+' 1 ************************************	
+keymap	OrchHitk
+	region	C-3	C-7
+	keybase	C-6
+	detune	0
+	end
+
+sound	OrchHits
+	volume		115
+	pan		0
+	use		OrchHit
+	venvelope	OrchHit
+	keymap		OrchHitk
+	end
+
+
+instrument	OrchHit
+	sound	OrchHits
+	end

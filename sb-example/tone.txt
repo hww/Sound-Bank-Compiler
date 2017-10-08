@@ -1,0 +1,93 @@
+#include D:\sbk\Frazi\Frazi.txt
+#include d:\sbk\YamahaPiano\brightpiano.txt
+#include D:\sbk\FHorn\FHorn.txt
+#include D:\sbk\SlowString\SlowString.txt
+#include D:\sbk\Clarinet\Clarinet.txt
+#include D:\sbk\Oboe\Oboe.txt
+#include D:\sbk\Brass\BrassOrc.txt
+#include D:\sbk\Solfegio\Solfejio.txt
+#include D:\sbk\FingBass\FingBass.txt
+#include D:\sbk\EPiano\EPiano.txt
+#include D:\sbk\SyntBass\SyntBass.txt
+#include D:\sbk\Drums\Drums.txt
+#include D:\sbk\Violin\Violin.txt
+#include D:\sbk\Banjo\Banjo.txt
+#include D:\sbk\Choir\Choir.txt
+#include D:\sbk\Flute\Flute.txt
+#include D:\sbk\Gunshot\Gunshot.txt
+#include D:\sbk\Harp\Harp.txt
+#include D:\sbk\OrchHit\OrchHit.txt
+#include D:\sbk\RevCimbal\RevCimbal.txt
+#include D:\sbk\Trombone\Trombone.txt
+#include D:\sbk\Harpsichord\Harpsichord.txt
+#include D:\sbk\Guitar\Guitar.txt
+#include D:\sbk\Taiko\Taiko.txt
+
+'*************************************************
+' BANK		           		   	
+'*************************************************
+
+bank OneBank 
+
+'	instrument	 0	EPiano
+	instrument	 0	brightpiano
+	instrument	 1	brightpiano
+	instrument	 4	EPiano
+	instrument	 6	Harpsichord
+	instrument 	25	Guitar
+	instrument	33	FingBass
+	instrument	38	SyntBass
+	instrument	40	Violin
+	instrument	44	StringsTrem
+	instrument	45	PizzViolin
+	instrument	46	Harp
+	instrument	48	Strings
+	instrument	49	SlowStrings
+	instrument	50	Strings
+	instrument	51	SlowStrings
+	instrument	52	Choir
+	instrument	55	OrchHit
+	instrument	57	Trombone
+	instrument	60	FrenchHorn
+	instrument	61	Brass
+	instrument	62	SynBrass
+	instrument	68	Oboe
+	instrument	71	Clarinet
+	instrument	75	PanFlute
+	instrument	76	brightpiano
+	instrument	77	EPiano
+	instrument	78	Solfegio
+	instrument 	79	Guitar
+	instrument	80	FingBass
+	instrument	81	SyntBass
+	instrument	82	Violin
+	instrument	83	StringsTrem
+	instrument	84	PizzViolin
+	instrument	85	Harp
+	instrument	86	Strings
+	instrument	87	SlowStrings
+	instrument	88	Strings
+	instrument	89	Choir
+	instrument	90	OrchHit
+	instrument	91	Trombone
+	instrument	92	FrenchHorn
+	instrument	93	Brass
+	instrument	94	SynBrass
+	instrument	95	Oboe
+	instrument	96	Clarinet
+	instrument	97	PanFlute
+	instrument	98	Banjo
+	instrument	99	Taiko
+	instrument	100	RevCimbal
+	instrument	101	Harpsichord
+	instrument	102	Drums
+ 
+	instrument	105	Banjo
+	instrument	116	Taiko
+	instrument	119	RevCimbal
+	instrument	125	Frazi
+	instrument	126	Solfegio
+	instrument	127	Drums
+end
+
+

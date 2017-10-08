@@ -1,0 +1,643 @@
+waves
+	wave	LaM	 	D:/sbk/Solfegio/LaM.wav
+	wave	CuM		D:/sbk/Solfegio/CuM.wav
+	wave	SiM		D:/sbk/Solfegio/SiM.wav
+	wave	Do1		D:/sbk/Solfegio/Do1.wav
+	wave	Tu1		D:/sbk/Solfegio/Tu1.wav
+	wave	Re1		D:/sbk/Solfegio/Re1.wav
+	wave	Mo1		D:/sbk/Solfegio/Mo1.wav
+	wave	Mi1		D:/sbk/Solfegio/Mi1.wav
+	wave	Fa1		D:/sbk/Solfegio/Fa1.wav
+	wave	Zu1		D:/sbk/Solfegio/Zu1.wav
+	wave	So1		D:/sbk/Solfegio/So1.wav
+	wave	Lo1		D:/sbk/Solfegio/Lo1.wav
+	wave	La1		D:/sbk/Solfegio/La1.wav
+	wave	Cu1		D:/sbk/Solfegio/Cu1.wav
+	wave	Si1		D:/sbk/Solfegio/Si1.wav
+	wave	Do2		D:/sbk/Solfegio/Do2.wav
+	wave	Tu2		D:/sbk/Solfegio/Tu2.wav
+	wave	Re2		D:/sbk/Solfegio/Re2.wav
+	wave	Mo2		D:/sbk/Solfegio/Mo2.wav
+	wave	Mi2		D:/sbk/Solfegio/Mi2.wav
+	wave	Fa2		D:/sbk/Solfegio/Fa2.wav
+	wave	Zu2		D:/sbk/Solfegio/Zu2.wav
+	wave	So2		D:/sbk/Solfegio/So2.wav
+	wave	Lo2		D:/sbk/Solfegio/Lo2.wav
+	end
+
+envelope Solfegio
+	sustain		1	1
+	p		0	0
+	p		127	100
+	end
+
+' 1 ************************************	
+keymap	Do1k
+	region	C-4	C-4
+	keybase	C-4
+	detune 	0
+	end
+	
+sound	Do1s
+	volume		115
+	pan		0
+	use		Do1
+	venvelope	Solfegio
+	keymap		Do1k
+	end
+
+' 2 ************************************	
+keymap	Tu1k
+	region	C#4	C#4	
+	keybase	C#4	
+	detune	0
+	end
+
+sound	Tu1s
+	volume		115
+	pan		0
+	use		Tu1
+	venvelope	Solfegio
+	keymap		Tu1k
+	end
+
+' 3 ************************************	
+keymap	Re1k
+	region	D-4	D-4
+	keybase	D-4
+	detune	0
+	end
+
+sound	Re1s
+	volume		115
+	pan		0
+	use		Re1
+	venvelope	Solfegio
+	keymap		Re1k
+	end
+
+' 4 ************************************	
+keymap	Mo1k
+	region	D#4	D#4
+	keybase	D#4
+	detune	0
+	end
+	
+	
+sound	Mo1s
+	volume		115
+	pan		0
+	use		Mo1
+	venvelope	Solfegio
+	keymap		Mo1k
+	end
+
+' 5 ************************************	
+keymap	Mi1k
+	region	E-4	E-4
+	keybase	E-4
+	detune 	0
+	end
+	
+sound	Mi1s
+	volume		115
+	pan		0
+	use		Mi1
+	venvelope	Solfegio
+	keymap		Mi1k
+	end
+
+' 6 ************************************	
+keymap	Fa1k
+	region	F-4	F-4
+	keybase	F-4
+	detune	0
+	end
+
+sound	Fa1s
+	volume		115
+	pan		0
+	use		Fa1
+	venvelope	Solfegio
+	keymap		Fa1k
+	end
+
+' 7 ************************************	
+keymap	Zu1k
+	region	F#4	F#4	
+	keybase	F#4	
+	detune	0
+	end
+
+sound	Zu1s
+	volume		115
+	pan		0
+	use		Zu1
+	venvelope	Solfegio
+	keymap		Zu1k
+	end
+
+' 8 ************************************	
+keymap	So1k
+	region	G-4	G-4	
+	keybase	G-4	
+	detune	0
+	end
+	
+	
+sound	So1s
+	volume		115
+	pan		0
+	use		So1
+	venvelope	Solfegio
+	keymap		So1k
+	end
+
+' 9 ************************************	
+keymap	Lo1k
+	region	G#4	G#4
+	keybase	G#4
+	detune 	0
+	end
+	
+sound	Lo1s
+	volume		115
+	pan		0
+	use		Lo1
+	venvelope	Solfegio
+	keymap		Lo1k
+	end
+
+' 10 ************************************	
+keymap	LaMk
+	region	A-4	A-4
+	keybase	A-4
+	detune	0
+	end
+
+sound	LaMs
+	volume		115
+	pan		0
+	use		LaM
+	venvelope	Solfegio
+	keymap		LaMk
+	end
+
+' 11 ************************************	
+keymap	CuMk
+	region	A#4	A#4	
+	keybase	A#4	
+	detune	0
+	end
+
+sound	CuMs
+	volume		115
+	pan		0
+	use		CuM
+	venvelope	Solfegio
+	keymap		CuMk
+	end
+
+' 12 ************************************	
+keymap	SiMk
+	region	B-4	B-4
+	keybase	B-4
+	detune	0
+	end
+	
+	
+sound	SiMs
+	volume		115
+	pan		0
+	use		SiM
+	venvelope	Solfegio
+	keymap		SiMk
+	end
+
+' 13 ************************************	
+keymap	Do1_1k
+	region	C-5	C-5	
+	keybase	C-5	
+	detune 	0
+	end
+	
+sound	Do1_1s
+	volume		115
+	pan		0
+	use		Do1
+	venvelope	Solfegio
+	keymap		Do1_1k
+	end
+
+' 14 ************************************	
+keymap	Tu1_1k
+	region	C#5	C#5	
+	keybase	C#5	
+	detune	0
+	end
+
+sound	Tu1_1s
+	volume		115
+	pan		0
+	use		Tu1
+	venvelope	Solfegio
+	keymap		Tu1_1k
+	end
+
+' 15 ************************************	
+keymap	Re1_1k
+	region	D-5	D-5	
+	keybase	D-5	
+	detune	0
+	end
+
+sound	Re1_1s
+	volume		115
+	pan		0
+	use		Re1
+	venvelope	Solfegio
+	keymap		Re1_1k
+	end
+
+' 16 ************************************	
+keymap	Mo1_1k
+	region	D#5	D#5	
+	keybase	D#5	
+	detune	0
+	end
+	
+	
+sound	Mo1_1s
+	volume		115
+	pan		0
+	use		Mo1
+	venvelope	Solfegio
+	keymap		Mo1_1k
+	end
+
+
+' 17 ************************************	
+keymap	Mi1_1k
+	region	E-5	E-5
+	keybase	E-5
+	detune	0
+	end
+	
+	
+sound	Mi1_1s
+	volume		115
+	pan		0
+	use		Mi1
+	venvelope	Solfegio
+	keymap		Mi1_1k
+	end
+
+' 18 ************************************	
+keymap	Fa1_1k
+	region	F-5	F-5
+	keybase	F-5
+	detune 	0
+	end
+	
+sound	Fa1_1s
+	volume		115
+	pan		0
+	use		Fa1
+	venvelope	Solfegio
+	keymap		Fa1_1k
+	end
+
+' 19 ************************************	
+keymap	Zu1_1k
+	region	F#5	F#5
+	keybase	F#5
+	detune	0
+	end
+
+sound	Zu1_1s
+	volume		115
+	pan		0
+	use		Zu1
+	venvelope	Solfegio
+	keymap		Zu1_1k
+	end
+
+' 20 ************************************	
+keymap	So1_1k
+	region	G-5	G-5	
+	keybase	G-5
+	detune	0
+	end
+
+sound	So1_1s
+	volume		115
+	pan		0
+	use		So1
+	venvelope	Solfegio
+	keymap		So1_1k
+	end
+
+' 21 ************************************	
+keymap	Lo1_1k
+	region	G#5	G#5
+	keybase	G#5
+	detune	0
+	end
+	
+	
+sound	Lo1_1s
+	volume		115
+	pan		0
+	use		Lo1
+	venvelope	Solfegio
+	keymap		Lo1_1k
+	end
+
+' 22 ************************************	
+keymap	La1_1k
+	region	A-5	A-5
+	keybase	A-5
+	detune 	0
+	end
+	
+sound	La1_1s
+	volume		115
+	pan		0
+	use		La1
+	venvelope	Solfegio
+	keymap		La1_1k
+	end
+
+' 23 ************************************	
+keymap	Cu1_1k
+	region	A#5	A#5
+	keybase	A#5
+	detune	0
+	end
+
+sound	Cu1_1s
+	volume		115
+	pan		0
+	use		Cu1
+	venvelope	Solfegio
+	keymap		Cu1_1k
+	end
+
+' 24 ************************************	
+keymap	Si1_1k
+	region	B-5	B-5
+	keybase	B-5
+	detune	0
+	end
+
+sound	Si1_1s
+	volume		115
+	pan		0
+	use		Si1
+	venvelope	Solfegio
+	keymap		Si1_1k
+	end
+
+' 25 ************************************	
+keymap	Do2_2k
+	region	C-6	C-6
+	keybase	C-6
+	detune	0
+	end
+	
+	
+sound	Do2_2s
+	volume		115
+	pan		0
+	use		Do2
+	venvelope	Solfegio
+	keymap		Do2_2k
+	end
+
+' 26 ************************************	
+keymap	Tu2_2k
+	region	C#6	C#6	
+	keybase	C#6	
+	detune 	0
+	end
+	
+sound	Tu2_2s
+	volume		115
+	pan		0
+	use		Tu2
+	venvelope	Solfegio
+	keymap		Tu2_2k
+	end
+
+' 27 ************************************	
+keymap	Re2_2k
+	region	D-6	D-6
+	keybase	D-6
+	detune	0
+	end
+
+sound	Re2_2s
+	volume		115
+	pan		0
+	use		Re2
+	venvelope	Solfegio
+	keymap		Re2_2k
+	end
+
+' 28 ************************************	
+keymap	Mo2_2k
+	region	D#6	D#6
+	keybase	D#6
+	detune	0
+	end
+
+sound	Mo2_2s
+	volume		115
+	pan		0
+	use		Mo2
+	venvelope	Solfegio
+	keymap		Mo2_2k
+	end
+
+' 29 ************************************	
+keymap	Mi2_2k
+	region	E-6	E-6
+	keybase	E-6
+	detune	0
+	end
+	
+	
+sound	Mi2_2s
+	volume		115
+	pan		0
+	use		Mi2
+	venvelope	Solfegio
+	keymap		Mi2_2k
+	end
+
+' 30 ************************************	
+keymap	Fa2_2k
+	region	F-6	F-6
+	keybase	F-6
+	detune 	0
+	end
+	
+sound	Fa2_2s
+	volume		115
+	pan		0
+	use		Fa2
+	venvelope	Solfegio
+	keymap		Fa2_2k
+	end
+
+'31 ************************************	
+keymap	Zu2_2k
+	region	F#6	F#6
+	keybase	F#6
+	detune	0
+	end
+
+sound	Zu2_2s
+	volume		115
+	pan		0
+	use		Zu2
+	venvelope	Solfegio
+	keymap		Zu2_2k
+	end
+
+' 32 ************************************	
+keymap	So2_2k
+	region	G-6	G-6
+	keybase	G-6
+	detune	0
+	end
+
+sound	So2_2s
+	volume		115
+	pan		0
+	use		So2
+	venvelope	Solfegio
+	keymap		So2_2k
+	end
+
+' 33 ************************************	
+keymap	Lo2_2k
+	region	G#6	G#6
+	keybase	G#6
+	detune	0
+	end
+	
+	
+sound	Lo2_2s
+	volume		115
+	pan		0
+	use		Lo2
+	venvelope	Solfegio
+	keymap		Lo2_2k
+	end
+
+' 34 ************************************	
+keymap	La2_2k
+	region	A-6	A-6	
+	keybase	A-6	
+	detune 	0
+	end
+	
+sound	La2_2s
+	volume		115
+	pan		0
+	use		La1
+	venvelope	Solfegio
+	keymap		La2_2k
+	end
+
+' 35 ************************************	
+keymap	Cu2_2k
+	region	A#6	A#6
+	keybase	A#6
+	detune	0
+	end
+
+sound	Cu2_2s
+	volume		115
+	pan		0
+	use		Cu1
+	venvelope	Solfegio
+	keymap		Cu2_2k
+	end
+
+' 36 ************************************	
+keymap	Si2_2k
+	region	B-6	B-6
+	keybase	B-6
+	detune	0
+	end
+
+sound	Si2_2s
+	volume		115
+	pan		0
+	use		Si1
+	venvelope	Solfegio
+	keymap		Si2_2k
+	end
+
+' 37 ************************************	
+keymap	Do2_3k
+	region	C-7	C-7
+	keybase	C-7
+	detune	0
+	end
+	
+sound	Do2_3s
+	volume		115
+	pan		0
+	use		Do2
+	venvelope	Solfegio
+	keymap	Do2_3k
+	end
+
+
+instrument	Solfegio
+
+	sound	Do1s
+	sound	Tu1s
+	sound	Re1s
+	sound	Mo1s
+	sound	Mi1s
+	sound	Fa1s
+	sound	Zu1s
+	sound	So1s
+	sound	Lo1s
+	sound	LaMs
+	sound	CuMs
+	sound	SiMs
+
+	sound	Do1_1s
+	sound	Tu1_1s
+	sound	Re1_1s
+	sound	Mo1_1s
+	sound	Mi1_1s
+	sound	Fa1_1s
+	sound	Zu1_1s
+	sound	So1_1s
+	sound	Lo1_1s
+	sound	La1_1s
+	sound	Cu1_1s
+	sound	Si1_1s
+
+	sound	Do2_2s
+	sound	Tu2_2s
+	sound	Re2_2s
+	sound	Mo2_2s
+	sound	Mi2_2s
+	sound	Fa2_2s
+	sound	Zu2_2s
+	sound	So2_2s
+	sound	Lo2_2s
+	sound	La2_2s
+	sound	Cu2_2s
+	sound	Si2_2s
+
+	sound	Do2_3s
+
+	end
