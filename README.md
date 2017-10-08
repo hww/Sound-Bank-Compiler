@@ -149,7 +149,7 @@ flags			Flags
 ```
 Example
 ```
-sound 		hi
+sound 	hi
 	envelope	env1
 	keymap 		kbd1
 	use			yahhoo
@@ -181,7 +181,7 @@ soundCount	=0;	/* number of sounds in this array */
 User defined values
 ```
 volume		The volume
-pan			The panorama
+pan		The panorama
 priority	The priority value
 flags		Flags
 tremType	Tremolo type
@@ -199,7 +199,7 @@ Example
 ```
 instrument flute
 	volume		100
-	pan	120
+	pan		120
 	priority	5
 	flags		0
 	tremType	1
