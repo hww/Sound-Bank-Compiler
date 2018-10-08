@@ -1,34 +1,31 @@
-/*
-    TDEFS.H   : Type definitions for the more commonly used type statements.
-       A 'shortened' version of MTYPES.H that has only what I use most.
+/*****************************************************************************
+ * @project SndSynt
+ * @info Sound Bank Compiler
+ * @platform DSP
+ * @autor Valery P. (https://github.com/hww)
+ *****************************************************************************/
 
-    This module is my hidden secret of "portability" to many compilers
-    and platforms.  I really love C sometimes.. ;)
-*/
-
+/*****************************************************************************
+ * TDEFS.H   : Type definitions for the more commonly used type statements.
+ *    A 'shortened' version of MTYPES.H that has only what I use most.
+ * 
+ * This module is my hidden secret of "portability" to many compilers
+ * and platforms.  I really love C sometimes.. ;)
+ *****************************************************************************/
 
 #ifndef TDEFS_H
 #define TDEFS_H
 
-
-/*
-        MikMod atomic types:
-        ====================
-*/
-
 typedef char            CHAR;
 
 #ifdef __OS2__
-
 typedef signed char     SBYTE;          /* has to be 1 byte signed */
 typedef unsigned char   UBYTE;          /* has to be 1 byte unsigned */
 typedef signed short    SWORD;          /* has to be 2 bytes signed */
 typedef unsigned short  UWORD;          /* has to be 2 bytes unsigned */
 typedef signed long     SLONG;          /* has to be 4 bytes signed */
 /* ULONG and BOOL are already defined in OS2.H */
-
 #elif defined(__alpha)
-
 typedef signed char     SBYTE;          /* has to be 1 byte signed */
 typedef unsigned char   UBYTE;          /* has to be 1 byte unsigned */
 typedef signed short    SWORD;          /* has to be 2 bytes signed */
@@ -37,9 +34,7 @@ typedef unsigned short  UWORD;          /* has to be 2 bytes unsigned */
 typedef signed int      SLONG;          /* has to be 4 bytes signed */
 typedef unsigned int    ULONG;          /* has to be 4 bytes unsigned */
 typedef int             BOOL;           /* doesn't matter.. 0=FALSE, <>0 true */
-
 #else
-
 typedef signed char     SBYTE;          /* has to be 1 byte signed */
 typedef unsigned char   UBYTE;          /* has to be 1 byte unsigned */
 typedef signed short    SWORD;          /* has to be 2 bytes signed */
@@ -47,9 +42,7 @@ typedef unsigned short  UWORD;          /* has to be 2 bytes unsigned */
 typedef signed long     SLONG;          /* has to be 4 bytes signed */
 typedef unsigned long   ULONG;          /* has to be 4 bytes unsigned */
 typedef int             BOOL;           /* doesn't matter.. 0=FALSE, <>0 true */
-
 #endif
-
 
 #ifdef __OS2__
 #define INCL_DOS
@@ -62,10 +55,8 @@ typedef int             BOOL;           /* doesn't matter.. 0=FALSE, <>0 true */
 
 
 #ifdef __WATCOMC__
-
 typedef __int64          SDOUBLE;
 typedef unsigned __int64 UDOUBLE;
-
 #define inportb(x)     inp(x)
 #define outportb(x,y)  outp(x,y)
 #define inport(x)      inpw(x)
@@ -78,8 +69,8 @@ typedef unsigned __int64 UDOUBLE;
 #define inp(x)      inportb(x)
 #define outp(x,y)   outportb(x,y)
 #define inpw(x)     inport(x)
-#define outpw(x,y)  outport(x,y)  
-#define _disable()  disable() 
+#define outpw(x,y)  outport(x,y)
+#define _disable()  disable()
 #define _enable()   enable()
 #endif
 
@@ -90,7 +81,7 @@ typedef unsigned __int64 UDOUBLE;
 #define inp       inportw
 #define outport   outportw
 #define inport    inportw
-#define interrupt 
+#define interrupt
 #endif
 
 #if defined(__OS2__)
@@ -101,5 +92,5 @@ typedef unsigned __int64 UDOUBLE;
         #define delay(x) ;
 #endif
 
-#endif
+#endif // TDEFS_H
 
