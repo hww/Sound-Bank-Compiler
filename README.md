@@ -26,7 +26,7 @@ Includes file name.txt inside this file. To terminates any object use 'end'
 end
 ```
 
-All collments starts with character '
+All comments starts with character '
 ```
 'My Comment
 ```
@@ -49,7 +49,7 @@ end
 
 ## Objects creation
 
-New objects creation starts with object type followed by objects name. The objects declaration is required before using
+New object creation starts with object type followed by objects name. The objects declaration is required before using
 
 ## Types
 ```
@@ -86,10 +86,10 @@ User defined values:
 ```
 velocityMin	Minimum press force
 velocityMax	Maximum press force
-keyMin		Lover key number
+keyMin		Lower key number
 keyMax		Higher key number
 keyBase		Base tone frequency
-detune		Tunning
+detune		Tuning
 ```
 Example
 ```
