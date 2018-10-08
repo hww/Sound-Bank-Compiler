@@ -1,4 +1,6 @@
-# Sound Bank Compiler
+# Sound Bank Compiler (V2)
+
+_Note: This branch was used for my DSP project. The master branch N64 project._
 
 _Note: This branch was used for my N64 project. The branch V2 for DSP project._
 

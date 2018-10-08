@@ -1,69 +1,48 @@
-/**********************************************************
-
-	Sound Bank Compiller
-
- **********************************************************/
+/*****************************************************************************
+ * @project SndSynt
+ * @info Sound Bank Compiler
+ * @platform DSP
+ * @autor Valery P. (https://github.com/hww)
+ *****************************************************************************/
 
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-
 #include "ultratypes.h"
 #include "main.h"
 
 FILE *ftbl;
 unsigned int tblpos;
 
-
-/**********************************************************
-
-	Открыть файл и поместить его в стек
-
- **********************************************************/
-
+// Open file and push it to the stack
 int opent_tbl( )
 {
-	
-	tblpos=0;					// В начало файла
-
-	if((ftbl = fopen( "tone.tbl" , "wb")) == NULL  )
-	{
-		printf("Can't create TBL file\n"); 
-		return 0;								// Всё ПЛОХО
-	}
-	return 1;									// Всё ОК
+    tblpos=0;
+    if((ftbl = fopen( "tone.tbl" , "wb")) == NULL  )
+    {
+        printf("Can't create TBL file\n");
+        return 0;
+    }
+    return 1;
 }
 
-/**********************************************************
-
-	Записать в выходной файл семпл
-
- **********************************************************/
-
+ // Save wave to the output file
 int write_tbl( char *ptr, unsigned int size)
 {
-#ifdef	MOST_SIGN_ORDER
-	_swab( ptr, ptr, size );
+#ifdef  MOST_SIGN_ORDER
+    _swab( ptr, ptr, size );
 #endif
-	if( fwrite( ptr, size, 1, ftbl ) == 0)
-	{
-		return 0;
-	}
-
-	tblpos+=size;
-	return 1;
+    if( fwrite( ptr, size, 1, ftbl ) == 0)
+    {
+        return 0;
+    }
+    tblpos+=size;
+    return 1;
 }
 
-/**********************************************************
-
-	Закрыть файл и достать его из стека
-
- **********************************************************/
-
+ // Close file and pop it from stack
 int close_tbl( )
 {
-
-	fclose( ftbl);								// Закрыть его
-	
-	return 1;
+    fclose( ftbl);
+    return 1;
 }
