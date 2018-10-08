@@ -240,8 +240,8 @@ bank strings2
 	flags	5
 	samplerate	32000
 	percussion	baraban1
-	instrumrnt	string1
+	instrument	string1
 	instrument	string2
-	instrument	horus
+	instrument	chorus
 end
 ```
