@@ -4,7 +4,7 @@ _Note: This branch was used for my DSP project. The master branch N64 project._
 
 _Note: This branch was used for my N64 project. The branch V2 for DSP project._
 
-Sound Bank Compiler (aslo known as msbank) is a command line tool which build sound bank for sound synthesizer. It uses on input a bank description file and the collection of .wav files. This compiller was used by me for different projects include the game for N64.
+Sound Bank Compiler (aslo known as msbank) is a command line tool which build sound bank for sound synthesizer. It uses on input a bank description file and the collection of .wav files. This compiler was used by me for different projects include the game for N64.
 
 Usage:
 ```
