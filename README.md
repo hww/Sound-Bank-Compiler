@@ -227,7 +227,7 @@ flags = 0;
 pad = 0;
 sampleRate = S32(44100);	/* e.g. 44100, 22050, etc... */
 ```
-user defined variables:
+User defined variables:
 ```
 flags		Flags word
 samplerate	Sampling frequency
@@ -236,7 +236,7 @@ instrument	Instrument
 ```
 Example
 ```
-bank stings2
+bank strings2
 	flags	5
 	samplerate	32000
 	percussion	baraban1
