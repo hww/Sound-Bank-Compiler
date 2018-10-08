@@ -230,7 +230,7 @@ sampleRate = S32(44100);	/* e.g. 44100, 22050, etc... */
 user defined variables:
 ```
 flags		Flags word
-samplerate	Infrequence of discretization
+samplerate	Sampling frequency
 percussion	Percussion instrument
 instrument	Instrument
 ```
